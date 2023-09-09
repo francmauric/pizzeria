@@ -1,6 +1,13 @@
+import NavBar from "./NavBar"
+
 export default function Header () {
 
     return (
-        <h1>Header de momento en contruccion.. </h1>
+        <div>
+            <div>
+                <NavBar />
+            </div>
+            <h1>RISTORANTE</h1>
+        </div>
     )
 }
