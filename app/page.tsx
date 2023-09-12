@@ -1,5 +1,6 @@
-import Header from "../component/Header"
-import Main from "../component/Main"
+import Header from "../components/Header"
+import Main from "../components/Main"
+
 
 export default function Home() {
 
@@ -11,6 +12,8 @@ export default function Home() {
     <h2>asdfads</h2>
     <div>dsafasdfadf</div>
     </div>
+
+    
   )
 
 }

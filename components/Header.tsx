@@ -7,7 +7,7 @@ export default function Header () {
             <div>
                 <NavBar />
             </div>
-            <h1>RISTORANTE</h1>
+            <h1>RISTORANTE e pizzeria</h1>
         </div>
     )
 }
