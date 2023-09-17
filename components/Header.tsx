@@ -3,12 +3,12 @@ import NavBar from "./NavBar"
 export default function Header () {
 
     return (
-        <div>
-            <div>
+        <div className="flex flex-col">
+            <div className="flex h-28">
                 <NavBar />
-                <video muted autoPlay loop className="w-full"  src="images/pizzavideo.mp4"></video>
             </div>
-            <div>
+            <div className="flex">
+                <video muted autoPlay loop className="w-full"  src="images/pizzavideo.mp4"></video>
             </div>
         </div>
     )

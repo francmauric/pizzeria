@@ -20,10 +20,8 @@ export default function NavBar() {
   }, []);
 
   return (
-    <div>
-      <div>
-        <h1 className="">Pizzeria </h1>
-      </div>
+    <div className="z-10">
+      
       <div
         className={`flex flex-wrap justify-around fixed top-0 left-0 w-full transition-all duration-300 bg-gray-600 opacity-200 text-2xl  ${
           navbarVisible ? "opacity-100" : "opacity-0"
@@ -32,7 +30,7 @@ export default function NavBar() {
         <div className="flex w-10% p-2">
           <img className="w-20 rounded-full" src="images/logo-pizza.png" alt="logo-pizza" />
         </div>
-        <div className="flex justify-around w-80%">
+        <div className="flex  justify-around w-80%">
           <a href="" className="p-5 text-red-500 cursor-pointer ">
             Home
           </a>
