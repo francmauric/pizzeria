@@ -20,7 +20,7 @@ export default function NavBar() {
   }, []);
 
   return (
-    <div className="z-10">
+    <div className="">
       
       <div
         className={`flex flex-wrap justify-around fixed top-0 left-0 w-full transition-all duration-300 bg-gray-600 opacity-200 text-2xl  ${
@@ -30,20 +30,20 @@ export default function NavBar() {
         <div className="flex w-10% p-2">
           <img className="w-20 rounded-full" src="images/logo-pizza.png" alt="logo-pizza" />
         </div>
-        <div className="flex  justify-around w-80%">
-          <a href="" className="p-5 text-red-500 cursor-pointer ">
+        <div className="flex justify-around w-100%">
+          <a href="" className="flex text-red-500 cursor-pointer ">
             Home
           </a>
-          <a href="" className="p-5 text-red-500 cursor-pointer ">
+          <a href="" className="flex text-red-500 cursor-pointer ">
             Ristorante
           </a>
-          <a href="" className="p-5 text-red-500 cursor-pointer ">
+          <a href="" className="flex text-red-500 cursor-pointer ">
             Bar
           </a>
-          <a href="" className="p-5 text-red-500 cursor-pointer ">
+          <a href="" className="flex text-red-500 cursor-pointer ">
             Pizzeria
           </a>
-          <a href="" className="p-5 text-red-500 cursor-pointer ">
+          <a href="" className="flex text-red-500 cursor-pointer ">
             prenotaciones
           </a>
         </div>
