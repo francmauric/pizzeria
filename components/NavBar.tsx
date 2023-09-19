@@ -30,20 +30,20 @@ export default function NavBar() {
         <div className="flex w-10% p-2">
           <img className="w-20 rounded-full" src="images/logo-pizza.png" alt="logo-pizza" />
         </div>
-        <div className="flex justify-around w-100%">
-          <a href="" className="flex text-red-500 cursor-pointer ">
+        <div className="flex justify-center content-center h-10 w-100%">
+          <a href="" className="flex mx-3  text-red-500 cursor-pointer ">
             Home
           </a>
-          <a href="" className="flex text-red-500 cursor-pointer ">
+          <a href="" className="flex mx-3 text-red-500 cursor-pointer ">
             Ristorante
           </a>
-          <a href="" className="flex text-red-500 cursor-pointer ">
+          <a href="" className="flex mx-3 text-red-500 cursor-pointer ">
             Bar
           </a>
-          <a href="" className="flex text-red-500 cursor-pointer ">
+          <a href="" className="flex mx-3 text-red-500 cursor-pointer ">
             Pizzeria
           </a>
-          <a href="" className="flex text-red-500 cursor-pointer ">
+          <a href="" className="flex mx-3 text-red-500 cursor-pointer ">
             prenotaciones
           </a>
         </div>
