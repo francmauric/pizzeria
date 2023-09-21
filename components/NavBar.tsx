@@ -27,10 +27,10 @@ export default function NavBar() {
           navbarVisible ? "opacity-100" : "opacity-0"
         }   `}
       >
-        <div className="flex w-10% p-2">
+        <div className="flex w-28 p-2">
           <img className="w-20 rounded-full" src="images/logo-pizza.png" alt="logo-pizza" />
         </div>
-        <div className="flex justify-center content-center h-10 w-100%">
+        <div className="flex justify-center content-center h-10 w-full">
           <a href="" className="flex mx-3  text-red-500 cursor-pointer ">
             Home
           </a>
