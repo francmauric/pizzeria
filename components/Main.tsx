@@ -24,7 +24,7 @@ export default function Main () {
             Pizzeria
           </a>
           <a href="" className="flex text-2xl h-10 text-red-500 cursor-pointer ">
-            prenotaciones
+            Prenotaciones
           </a>
         </div>
       </div>

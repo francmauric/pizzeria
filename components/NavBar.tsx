@@ -23,8 +23,8 @@ export default function NavBar() {
     <div className="">
       
       <div
-        className={`flex flex-wrap justify-around fixed top-0 left-0 w-full transition-all duration-300 bg-gray-600 opacity-200 text-2xl  ${
-          navbarVisible ? "opacity-100" : "opacity-0"
+        className={`flex flex-wrap justify-around fixed top-0 left-0 w-full transition-all duration-300 bg-gray-600  text-2xl  ${
+          navbarVisible ? "opacity-90" : "opacity-0"
         }   `}
       >
         <div className="flex w-28 p-2">
@@ -44,7 +44,7 @@ export default function NavBar() {
             Pizzeria
           </a>
           <a href="" className="flex mx-3 text-red-500 cursor-pointer ">
-            prenotaciones
+            Prenotaciones
           </a>
         </div>
       </div>
