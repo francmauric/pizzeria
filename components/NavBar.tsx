@@ -31,19 +31,19 @@ export default function NavBar() {
           <img className="w-20 rounded-full" src="images/logo-pizza.png" alt="logo-pizza" />
         </div>
         <div className="flex justify-center content-center h-10 w-full">
-          <a href="" className="flex mx-3  text-red-500 cursor-pointer ">
+          <a href="" className="flex text-3xl mx-3 font-semibold font-sans hover:font-serif  text-red-500 cursor-pointer ">
             Home
           </a>
-          <a href="" className="flex mx-3 text-red-500 cursor-pointer ">
+          <a href="" className="flex text-3xl mx-3 font-semibold font-sans hover:font-serif text-red-500 cursor-pointer ">
             Ristorante
           </a>
-          <a href="" className="flex mx-3 text-red-500 cursor-pointer ">
+          <a href="" className="flex text-3xl mx-3 font-semibold font-sans hover:font-serif text-red-500 cursor-pointer ">
             Bar
           </a>
-          <a href="" className="flex mx-3 text-red-500 cursor-pointer ">
+          <a href="" className="flex text-3xl mx-3 font-semibold font-sans hover:font-serif text-red-500 cursor-pointer ">
             Pizzeria
           </a>
-          <a href="" className="flex mx-3 text-red-500 cursor-pointer ">
+          <a href="" className="flex text-3xl mx-3 font-semibold font-sans hover:font-serif text-red-500 cursor-pointer ">
             Prenotaciones
           </a>
         </div>
