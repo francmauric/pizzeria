@@ -20,10 +20,10 @@ export default function NavBar() {
   }, []);
 
   return (
-    <div className="">
+    <div className="hidden sm:flex ">
       
       <div
-        className={`flex flex-wrap justify-around fixed top-0 left-0 w-full transition-all duration-300 bg-gray-600  text-2xl  ${
+        className={`flex  flex-wrap justify-around fixed top-0 left-0 w-full transition-all duration-300 bg-gray-600  text-2xl  ${
           navbarVisible ? "opacity-90" : "opacity-0"
         }   `}
       >
