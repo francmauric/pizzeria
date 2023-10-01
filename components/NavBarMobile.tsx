@@ -20,7 +20,7 @@ export default function NavBarMobile () {
         <div className="p-6 w-1/2 h-screen bg-gradient-to-b from-orange-500 to-gray-400 z-100 bg-opacity-90 fixed top-0 -left-96 lg:left-0 lg:w-60  peer-focus:left-0 peer:transition ease-out delay-150 duration-200 sm:hidden">
           <div className="flex flex-col rounded justify-start item-center ">
             <div className="flex rounded-b-3xl items-center justify-center bg-gray-500 bg-opacity-80 p-5 h-48 pb-10">
-                <img className="rounded-full h-28 w-28" src="images/logo-HYW.png" alt="hair" />
+                <img className="rounded-full  w-28" src="images/logo-pizza.png" alt="hair" />
             </div>
              <div className="flex rounded-t-3xl flex-col bg-opacity-80 justify-items-center bg-gray-500 " >
                  <h2 className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center ">Home</h2>
