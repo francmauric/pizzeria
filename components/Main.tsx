@@ -2,6 +2,7 @@ export default function Main () {
 
     return(
         <div>
+            
             {/* <h1>main cuerpo etx</h1>
             <div className="h-80 bg-yellow-900">
                 text
@@ -28,6 +29,13 @@ export default function Main () {
           </a>
         </div>
       </div> */}
+        <div className="bg-orange-800 flex ">
+          <h1 className="flex">Esto es el main </h1>
+          <p className="flex">Da sempre noi di Zenzerø diamo il nostro contributo a sostegno dell’ambiente, 
+            privilegiando prodotti biologici e a KM0, stando attenti alla provenienza e al
+             confezionamento dei prodotti evitando il packaging in plastica e tutto quello 
+             che è preconfezionato, scegliendo cibi freschi e di stagione.</p>
+        </div>
         </div>
     )
 }
