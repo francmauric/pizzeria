@@ -30,26 +30,26 @@ export default function Main () {
         </div>
       </div> */}
         <div className="bg-orange-800 flex flex-col ">
-          <h1 className="flex justify-center text-3xl">Esto es el main </h1>
-          <p className="flex justify-center text-xl m-10">Da sempre noi di Zenzerø diamo il nostro contributo a sostegno dell’ambiente, 
+          <h1 className="flex justify-center text-3xl">The Tower </h1>
+          <p className="flex justify-center text-xl m-10">Da sempre noi di The Tower diamo il nostro contributo a sostegno dell’ambiente, 
             privilegiando prodotti biologici e a KM0, stando attenti alla provenienza e al
              confezionamento dei prodotti evitando il packaging in plastica e tutto quello 
              che è preconfezionato, scegliendo cibi freschi e di stagione.</p>
              <div className="flex flex-wrap justify-around w-80% ">
                 <div className="m-5">
-                  <img className="w-20" src="images/info.png" alt="" />
+                  <img className="w-20" src="images/cocina.png" alt="" />
                   <h3>rispetto ambientale</h3>
                 </div>
                 <div className="m-5">
-                  <img className="w-20" src="images/info.png" alt="" />
+                  <img className="w-20" src="images/telefono-inteligente.png" alt="" />
                   <h3>accurata ricerca</h3>
                 </div>
                 <div className="m-5">
-                  <img className="w-20" src="images/info.png" alt="" />
+                  <img className="w-20" src="images/restaurante.png" alt="" />
                   <h3>inclusivita</h3>
                 </div>
                 <div className="m-5">
-                  <img className="w-20" src="images/info.png" alt="" />
+                  <img className="w-20" src="images/salud.png" alt="" />
                   <h3>attenzione a intolleranze</h3>
                 </div>
              </div>
