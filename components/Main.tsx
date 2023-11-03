@@ -30,8 +30,8 @@ export default function Main () {
         </div>
       </div> */}
         <div className="bg-orange-800 flex flex-col ">
-          <h1 className="flex justify-center text-3xl">The Tower </h1>
-          <p className="flex justify-center text-center text-xl m-28">Da sempre noi di The Tower diamo il nostro contributo a sostegno dell’ambiente, 
+          <h1 className="flex justify-center text-5xl pt-20">The Tower </h1>
+          <p className="flex justify-center text-center text-2xl m-28">Da sempre noi di The Tower diamo il nostro contributo a sostegno dell’ambiente, 
             privilegiando prodotti biologici e a KM0, stando attenti alla provenienza e al
              confezionamento dei prodotti evitando il packaging in plastica e tutto quello 
              che è preconfezionato, scegliendo cibi freschi e di stagione.</p>
