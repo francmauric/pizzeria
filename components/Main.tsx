@@ -35,7 +35,7 @@ export default function Main () {
             privilegiando prodotti biologici e a KM0, stando attenti alla provenienza e al
              confezionamento dei prodotti evitando il packaging in plastica e tutto quello 
              che è preconfezionato, scegliendo cibi freschi e di stagione.</p>
-             <div className="flex flex-wrap justify-around w-80% ">
+             <div className="flex flex-wrap justify-around w-80% pb-20 ">
                 <div className="m-5 ">
                   <img className="w-20 m-5 rounded-full bg-white" src="images/cocina.png" alt="" />
                   <h3 className="text-l text-center">excelente servicio</h3>
