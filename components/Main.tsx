@@ -1,3 +1,5 @@
+import About from "./About"
+
 export default function Main () {
 
     return(
@@ -55,6 +57,9 @@ export default function Main () {
                   <img className="w-20 m-5 rounded-full bg-white" src="images/salud.png" alt="" />
                   <h3 className="text-center">cocktails</h3>
                 </div>
+             </div>
+             <div>
+              <About />
              </div>
         </div>
         </div>
