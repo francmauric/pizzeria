@@ -1,4 +1,5 @@
 import About from "./About"
+import Footer from "./Footer"
 
 export default function Main () {
 
@@ -60,6 +61,9 @@ export default function Main () {
              </div>
              <div>
               <About />
+             </div>
+             <div>
+              <Footer/>
              </div>
         </div>
         </div>
