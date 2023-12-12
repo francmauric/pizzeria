@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import Ristorante from "./Ristorante";
+
+import Link from "next/link";
 
 export default function NavBar() {
   const [navbarVisible, setNavbarVisible] = useState(true);
@@ -35,12 +36,13 @@ export default function NavBar() {
           <a href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif  text-zinc-50 cursor-pointer ">
             Home
           </a>
-          <a href="/Ristorante" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">
+          <a  className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">
             Ristorante
           </a>
-          <a href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">
+          
+          <Link href="/Ristorante" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">
             Pizzeria
-          </a>
+          </Link>
           <a href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">
             Bar
           </a>
