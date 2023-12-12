@@ -39,10 +39,10 @@ export default function NavBar() {
             Ristorante
           </a>
           <a href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">
-            Bar
+            Pizzeria
           </a>
           <a href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">
-            Pizzeria
+            Bar
           </a>
           <a href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">
             Prenotaciones
