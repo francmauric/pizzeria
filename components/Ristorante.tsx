@@ -1,6 +1,6 @@
-/* export default function Ristorante() {
+export default function Ristorante() {
 
     return (
         <div>ristorante</div>
     )
-} */
+}
