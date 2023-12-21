@@ -29,8 +29,8 @@ export default function NavBar() {
           navbarVisible ? "opacity-90" : "opacity-0"
         }   `}
       >
-        <div className="flex w-28 p-2">
-          <img className="w-20 rounded-full" src="images/logo-pizza.png" alt="logo-pizza" />
+        <div className="flex p-2">
+          <img className="w-40 rounded-full" src="images/logo-pizza.png" alt="logo-pizza" />
         </div>
         <div className="flex justify-around content-center h-10 w-full">
           <a href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif  text-zinc-50 cursor-pointer ">
