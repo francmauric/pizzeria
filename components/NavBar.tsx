@@ -33,22 +33,21 @@ export default function NavBar() {
           <img className="w-40 rounded-full" src="images/logo-pizza.png" alt="logo-pizza" />
         </div>
         <div className="flex justify-around content-center h-10 w-full">
-          <a href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif  text-zinc-50 cursor-pointer ">
-            Home
-          </a>
-          <a  className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">
-            Pizzeria
-          </a>
+          <Link href="/" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif  text-zinc-50 cursor-pointer "> Home
           
-          <Link href="/Ristorante" legacyBehavior >
-            <a className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">Ristorante</a>
           </Link>
-          <a href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">
-            Bar
-          </a>
-          <a href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">
-            Prenotaciones
-          </a>
+          <Link href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">Pizzeria
+          
+          </Link>
+          <Link href="/Ristorante"  className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer "> Ristorante
+            
+          </Link>
+          <Link href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">Bar
+          
+          </Link>
+          <Link href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">Prenotaciones
+         
+          </Link>
         </div>
       </div>
     </div>
