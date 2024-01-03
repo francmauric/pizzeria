@@ -37,11 +37,11 @@ export default function NavBar() {
             Home
           </a>
           <a  className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">
-            Ristorante
+            Pizzeria
           </a>
           
           <Link href="/Ristorante" legacyBehavior >
-            <a className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">Pizzeria</a>
+            <a className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">Ristorante</a>
           </Link>
           <a href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">
             Bar
