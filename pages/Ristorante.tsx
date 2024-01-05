@@ -1,4 +1,4 @@
-export default function Ristorante() {
+export default function ristorante() {
 
     return (
         <div>
