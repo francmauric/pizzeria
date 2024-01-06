@@ -1,13 +1,14 @@
-"use client"
-import { useState, useEffect } from "react";
+
+import React from "react";
 
 import Link from "next/link";
-import { useScrollEffectClient } from "@/utils/scrollUtils";
+import { useScrollEffect } from "@/utils/client/scrollUtils";
+import { useScrollEffectServer  } from "@/utils/server/scrollUtilsServer";
 
 export default function NavBar() {
  /*  const [navbarVisible, setNavbarVisible] = useState(true); */
 
-  const navbarVisible = useScrollEffectClient();
+  const navbarVisible = process.browser ? useScrollEffect() : useScrollEffectServer();
 
   /* const handleScroll = () => {
     if (window.scrollY > 100) {
@@ -48,7 +49,7 @@ export default function NavBar() {
           <Link href="/Bar" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">Bar
           
           </Link>
-          <Link href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">Prenotaciones
+          <Link href="/Prenotaciones" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">Prenotaciones
          
           </Link>
         </div>

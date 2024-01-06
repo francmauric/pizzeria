@@ -22,10 +22,11 @@ export const useScrollEffect = () => {
     return navbarVisible;
 };
 
-export const useScrollEffectClient = () => {
-    if (typeof window === "undefined") {
-        return true
-    }
+/* export const setupScrollEffect = () => {
+        if(typeof window !== "undefined") {
+            return useScrollEffect();
+        }
+    
 
-    return useScrollEffect();
-};
+    return true;
+}; */
