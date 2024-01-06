@@ -1,3 +1,4 @@
+"use client"
 import { useState, useEffect } from "react" ;
 
 export const useScrollEffect = () => {
@@ -19,4 +20,12 @@ export const useScrollEffect = () => {
     }, []);
 
     return navbarVisible;
-}
+};
+
+export const useScrollEffectClient = () => {
+    if (typeof window === "undefined") {
+        return true
+    }
+
+    return useScrollEffect();
+};
