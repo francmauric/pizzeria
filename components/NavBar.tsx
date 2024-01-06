@@ -45,7 +45,7 @@ export default function NavBar() {
           <Link href="/Ristorante"  className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer "> Ristorante
             
           </Link>
-          <Link href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">Bar
+          <Link href="/Bar" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">Bar
           
           </Link>
           <Link href="" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">Prenotaciones
