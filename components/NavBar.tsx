@@ -2,13 +2,13 @@
 import React from "react";
 
 import Link from "next/link";
-import { useScrollEffect } from "@/utils/client/scrollUtils";
-import { useScrollEffectServer  } from "@/utils/server/scrollUtilsServer";
+import { useScrollEffect } from "../utils/client/scrollUtils";
+import { useScrollEffectServer  } from "../utils/server/scrollUtilsServer";
 
 export default function NavBar() {
  /*  const [navbarVisible, setNavbarVisible] = useState(true); */
 
-  const navbarVisible = process.browser ? useScrollEffect() : useScrollEffectServer();
+  const navbarVisible = typeof window !== 'undefined' ? useScrollEffect() : useScrollEffectServer();
 
   /* const handleScroll = () => {
     if (window.scrollY > 100) {

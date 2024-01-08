@@ -1,3 +1,4 @@
+/* import React from "react" */
 
 import NavBar from "@/components/NavBar"
 
@@ -5,9 +6,9 @@ export default function ristorante() {
 
     return (
         <div>
-            <div className="w-full">
+            <div className="w-full ">
             <div className="flex flex-col relative">
-                <div className="flex  relative z-20">
+                <div className="flex  relative z-20 ">
                 <NavBar />
                 
                 </div>

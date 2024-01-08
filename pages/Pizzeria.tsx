@@ -9,7 +9,7 @@ export default function pizzeria () {
                  Home
                  </Link>
             </div>
-            <h1>Bienvenido a la seccion pizzeria</h1>
+            <h1 className="text-red-600">Bienvenido a la seccion pizzeria</h1>
         </div>
     )
 }
