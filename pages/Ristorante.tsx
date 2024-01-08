@@ -1,5 +1,5 @@
 /* import React from "react" */
-
+import '@/style/globals.css'
 import NavBar from "@/components/NavBar"
 
 export default function ristorante() {
