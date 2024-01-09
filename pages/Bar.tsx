@@ -8,7 +8,7 @@ export default function bar () {
         <div>
             <div>
                 <NavBar/>
-                <img src="images/cocktailbar.jpg" alt="" />
+                <img src="images/cocktailbar.jpg" alt="pizza" />
                  {/* <Link href="/">
                  Home
                  </Link> */}
