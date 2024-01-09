@@ -1,9 +1,6 @@
 
 import { Inter } from 'next/font/google'
-import 'tailwindcss/base.css';
-import 'tailwindcss/components.css';
-import 'tailwindcss/utilities.css';
-/* import 'styles/globals.css'; */
+
 import '@/style/globals.css'
 
 
