@@ -1,16 +1,13 @@
-import Header from "../components/Header"
-import Main from "../components/Main"
-
-import '@/style/globals.css'
+import Home from '@/pages/Home'
+/* import '@/style/globals.css' */
 
 
 
-export default function Home() {
+export default function app() {
 
   return (
     <div>
-      <Header />
-      <Main />
+      <Home />
  
     </div>
 

@@ -1,5 +1,4 @@
 
-
 import NavBar from "./NavBar"
 import NavBarMobile from "./NavBarMobile"
 
