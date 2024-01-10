@@ -2,7 +2,6 @@
 import NavBar from "./NavBar"
 import NavBarMobile from "./NavBarMobile"
 
-
 export default function Header () {
 
     return (
@@ -10,7 +9,7 @@ export default function Header () {
             <div className="flex  relative z-20">
                 <NavBar />
                 <NavBarMobile />
-            </div>
+           </div>
            
             <div className="flex object-contain relative overflow-hidden">
                 <video muted autoPlay loop className="w-full relative z-10 absolute inset-0 object-cover"  src="images/pizzavideo.mp4"></video>

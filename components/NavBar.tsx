@@ -1,5 +1,5 @@
 
-import React from "react";
+/* import React from "react"; */
 
 import Link from "next/link";
 import { useScrollEffect } from "../utils/client/scrollUtils";
@@ -9,7 +9,7 @@ export default function NavBar() {
  /*  const [navbarVisible, setNavbarVisible] = useState(true); */
 
   const navbarVisible = typeof window !== 'undefined' ? useScrollEffect() : useScrollEffectServer();
-
+  
   /* const handleScroll = () => {
     if (window.scrollY > 100) {
       setNavbarVisible(false);
