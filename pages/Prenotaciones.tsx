@@ -1,4 +1,4 @@
-import '@/style/globals.css'
+/* import '@/style/globals.css'
 
 import Link from "next/link"
 
@@ -10,4 +10,4 @@ export default function prenotaciones () {
             <h1>bienvenido a PRENOTACIONES</h1>
         </div>
     )
-}
+} */

@@ -1,4 +1,4 @@
-import '@/style/globals.css'
+/* import '@/style/globals.css'
 import Link from "next/link"
 import NavBar from '@/components/NavBar'
 
@@ -18,4 +18,4 @@ export default function pizzeria () {
             <h1 className="text-red-600">Bienvenido a la seccion pizzeria</h1>
         </div>
     )
-}
+} */
