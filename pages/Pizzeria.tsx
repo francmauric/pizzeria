@@ -6,7 +6,7 @@ export default function pizzeria () {
 
     return(
         <div>
-            <div /* className='flex flex-col relative' */>
+            <div className='flex flex-col relative'>
                 <div className="flex  relative z-20 ">
                     <NavBar />
                 
