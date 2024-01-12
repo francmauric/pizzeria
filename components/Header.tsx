@@ -6,7 +6,7 @@ export default function Header () {
 
     return (
         <div className="flex flex-col relative">
-            <div className="flex  relative z-20">
+            <div className="flex relative z-20">
                 <NavBar />
                 <NavBarMobile />
            </div>

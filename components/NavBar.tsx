@@ -1,29 +1,13 @@
 
-/* import React from "react"; */
+import React from "react";
 
 import Link from "next/link";
 import { useScrollEffect } from "@/utils/client/scrollUtils";
 import { useScrollEffectServer  } from "@/utils/server/scrollUtilsServer";
 
 export default function NavBar() {
- /*  const [navbarVisible, setNavbarVisible] = useState(true); */
 
   const navbarVisible = typeof window !== 'undefined' ? useScrollEffect() : useScrollEffectServer();
-  
-  /* const handleScroll = () => {
-    if (window.scrollY > 100) {
-      setNavbarVisible(false);
-    } else {
-      setNavbarVisible(true);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []); */
 
   return (
     <div className="hidden sm:flex ">
