@@ -8,7 +8,7 @@ import { useScrollEffectServer  } from "@/utils/server/scrollUtilsServer";
 export default function NavBar() {
 
   const navbarVisible = typeof window !== 'undefined' ? useScrollEffect() : useScrollEffectServer();
-  console.log(navbarVisible)
+  
   return (
     <div className="hidden sm:flex ">
       
