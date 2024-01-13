@@ -4,7 +4,7 @@ import Footer from "./Footer"
 export default function Main () {
 
     return(
-        <div>
+        <div className="overflow-hidden">
             
             
         <div className="bg-orange-800 flex flex-col ">
