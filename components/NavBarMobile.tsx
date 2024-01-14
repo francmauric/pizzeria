@@ -2,7 +2,7 @@
 import React from "react"
 import { Disclosure } from "@headlessui/react"
 import { GiHamburgerMenu } from "react-icons/gi"
-
+import Link from "next/link";
 
 
 export default function NavBarMobile () {
@@ -24,10 +24,12 @@ export default function NavBarMobile () {
             </div>
              <div className="flex rounded-t-3xl flex-col bg-opacity-80 justify-items-center bg-gray-500 " >
                  <h2 className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center ">Home</h2>
-                 <a href="#service" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center" >Ristorante</a>
-                 <a href="#salon" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center">Bar</a>
-                 <a href="#salon" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center">Pizzeria</a>
-                 <button className="bg-indigo-500 h-16 ring-white-800 hover:ring-2 opacity-70 hover:opacity-100  p-3 cursor-pointer px-3 rounded text-center "><h2 className="">Prenotazione</h2></button>
+                 <Link href="/Ristorante" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center">Ristorante</Link>
+                 <Link href="/Bar" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center">Bar</Link>
+                 <Link href="/Pizzeria" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center">Pizzeria</Link>
+                 <Link href="/Prenotaciones" className="bg-indigo-500 h-16 ring-white-800 hover:ring-2 opacity-70 hover:opacity-100  p-3 cursor-pointer px-3 rounded text-center ">Prenotazione</Link>
+
+                
              </div>
 
             

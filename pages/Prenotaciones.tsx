@@ -13,6 +13,7 @@ export default function prenotaciones () {
         <div>
             
             <Header />
+            <h1 className='text-black  md:text-8xl'>PRENOTACIONES</h1>
             <Main />
             
             {/* <Link href="/">Home</Link>
