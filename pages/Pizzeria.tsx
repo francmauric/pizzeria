@@ -2,6 +2,7 @@ import '@/style/globals.css'
 import Link from "next/link"
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
+import NavBarMobile from '@/components/NavBarMobile'
 
 export default function pizzeria () {
 
@@ -10,6 +11,7 @@ export default function pizzeria () {
             <div className='flex flex-col relative'>
                 <div className="flex  relative z-20 ">
                     <NavBar />
+                    <NavBarMobile />
                 
                 </div>
                 <div className="flex object-contain relative overflow-hidden">

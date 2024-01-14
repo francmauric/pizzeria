@@ -23,7 +23,7 @@ export default function NavBarMobile () {
                 <img className="rounded-full  w-28" src="images/logo-pizza.png" alt="hair" />
             </div>
              <div className="flex rounded-t-3xl flex-col bg-opacity-80 justify-items-center bg-gray-500 " >
-                 <h2 className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center ">Home</h2>
+             <Link href="/" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center">HOME</Link>
                  <Link href="/Ristorante" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center">Ristorante</Link>
                  <Link href="/Bar" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center">Bar</Link>
                  <Link href="/Pizzeria" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center">Pizzeria</Link>
