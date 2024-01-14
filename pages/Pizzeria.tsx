@@ -1,6 +1,7 @@
 import '@/style/globals.css'
 import Link from "next/link"
 import NavBar from '@/components/NavBar'
+import Footer from '@/components/Footer'
 
 export default function pizzeria () {
 
@@ -16,6 +17,7 @@ export default function pizzeria () {
                 </div>
             </div>
             <h1 className="text-red-600">Bienvenido a la seccion pizzeria</h1>
+            <Footer/>
         </div>
     )
 }

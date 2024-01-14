@@ -1,6 +1,7 @@
 
 import '@/style/globals.css'
 import NavBar from "@/components/NavBar"
+import Footer from '@/components/Footer'
 
 export default function ristorante() {
 
@@ -17,7 +18,7 @@ export default function ristorante() {
                 </div>
             </div>
             </div>
-        
+            <Footer />
         </div>
         )
 }
