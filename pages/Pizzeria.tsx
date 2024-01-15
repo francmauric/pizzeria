@@ -21,11 +21,12 @@ export default function pizzeria () {
             <main className='bg-gray-500 w-full flex-row'>
                <div className='flex flex-col items-center'> 
                 <h1 className='text-center w-60 text-white'>Menu</h1>
-                <div className='flex w-full bg-gray-200 p-4'>
+                <div className=' w-full ml-8 bg-gray-200 p-4 rounded-lg'>
                   <div className='w-2/4'>  
                    <h2 className='text-xl font-bold mb-4'>tipos de pizza</h2>
                    <ul className='list-disc pl-4'>
                         <li>margarita</li>
+                            <p>queso,y salsa</p>
                         <li>diavola</li>
                    </ul>
                   </div>  
