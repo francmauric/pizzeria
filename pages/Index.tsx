@@ -16,8 +16,7 @@ export default function Home () {
             <Header />
             <Main />
             
-            {/* <Link href="/">Home</Link>
-            <h1>bienvenido a PRENOTACIONES</h1> */}
+           
         </div>
     )
 }

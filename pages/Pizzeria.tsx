@@ -18,6 +18,20 @@ export default function pizzeria () {
                     <img className="w-full relative z-10 absolute inset-0 object-cover" src="images/pizzaheader.jpeg" alt="tavolo" />
                 </div>
             </div>
+            <main className='bg-gray-500 w-full flex-row'>
+               <div className='flex flex-col items-center'> 
+                <h1 className='text-center w-60 text-white'>Menu</h1>
+                <div className='flex w-full bg-gray-200 p-4'>
+                  <div className='w-2/4'>  
+                   <h2 className='text-xl font-bold mb-4'>tipos de pizza</h2>
+                   <ul className='list-disc pl-4'>
+                        <li>margarita</li>
+                        <li>diavola</li>
+                   </ul>
+                  </div>  
+                </div>
+              </div> 
+            </main>
             <h1 className="text-red-600">Bienvenido a la seccion pizzeria</h1>
             <Footer/>
         </div>
