@@ -25,9 +25,36 @@ export default function pizzeria () {
                   <div className='w-2/4'>  
                    <h2 className='text-xl font-bold mb-4'>tipos de pizza</h2>
                    <ul className='list-disc pl-4'>
-                        <li>margarita</li>
-                            <p>queso,y salsa</p>
-                        <li>diavola</li>
+                        <li>4 Stagioni</li>
+                            <p>Pomodoro, mozzarella, 1/4 prosciutto cotto, 1/4 funghi champignon trifolati, 1/4 carciofi trifolati, 1/4 olive nere</p>
+                        <li>Diavola</li>
+                            <p>Pomodoro, Mozzarella, Spianata piccante</p>
+                        <li>4 Formaggi</li>  
+                            <p>Pomodoro, Mozzarella, Edamer, Gorgonzola, Grana grattugiato</p> 
+                        <li>Affumicata</li>
+                            <p>Pomodoro, Mozzarella, Speck, Scamorza affumicata</p>  
+                        <li>Alessandria</li> 
+                            <p>Pomodoro, Mozzarella, Salsiccia, Funghi porcini, Brie</p>  
+                        <li>Amalfi</li>
+                            <p>Mozzarella di Bufala, Acciughe, Olive nere, Pomodorini, Basilico</p>
+                        <li>Americana</li>
+                            <p>Pomodoro, Mozzarella, Wurstel, Patate al forno*</p>
+                        <li>Bufala</li>
+                            <p>Pomodoro, Mozzarella di bufala, basilico</p>
+                        <li>Caprese</li>
+                            <p>Pomodorini, Bufala, Origano</p>
+                        <li>Capricciosa</li>
+                            <p>Pomodoro, Mozzarella, Prosciutto cotto , Funghi champignon trifolati, Carciofi trifolati</p>
+                        <li>Carciofina</li>
+                            <p>Pomodoro, Mozzarella, Carciofi trifolati</p>
+                        <li>Fattoria</li>
+                            <p>Pomodoro, Mozzarella, Pancetta, Uovo</p>
+                        <li>Funghi</li>
+                            <p>Pomodoro, Mozzarella, Funghi champignon trifolati</p>
+                        <li>Margherita</li>
+                            <p>Pomodoro, Mozzarella</p>
+                        <li>Napoli</li>
+                            <p>Pomodoro, Mozzarella, Acciughe</p>
                    </ul>
                   </div>  
                 </div>
