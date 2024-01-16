@@ -19,10 +19,10 @@ export default function pizzeria () {
                 </div>
             </div>
             <main className='bg-gray-500 w-full flex-row'>
-               <div className='flex flex-col items-center'> 
+               <div className='flex justify-end  '> 
                 <h1 className='text-center w-60 text-white'>Menu</h1>
-                <div className=' w-full ml-8 bg-gray-200 p-4 rounded-lg'>
-                  <div className='w-2/4'>  
+                <div className='justify-end w-2/4 bg-gray-200 p-4 rounded-lg'>
+                  <div className=''>  
                    <h2 className='text-xl font-bold mb-4'>tipos de pizza</h2>
                    <ul className='list-disc pl-4'>
                         <li>4 Stagioni</li>
