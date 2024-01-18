@@ -3,8 +3,16 @@ import Link from "next/link"
 import NavBar from '@/components/NavBar'
 import Footer from '@/components/Footer'
 import NavBarMobile from '@/components/NavBarMobile'
+import { useState } from 'react';
+import '@/style/pizzeria.css'
 
 export default function pizzeria () {
+   const [selectedPizza, setSelectedPizza] = useState<string | null>(null);
+
+   const handlePizzaSelect = (pizza: string) => {
+      setSelectedPizza(pizza);
+   };
+   console.log(selectedPizza)
 
     return(
         <div>
@@ -18,7 +26,7 @@ export default function pizzeria () {
                     <img className="w-full relative z-10 absolute inset-0 object-cover" src="images/pizzaheader.jpeg" alt="tavolo" />
                 </div>
             </div>
-            <main className='bg-gray-500 w-full flex-row'>
+            <main className='bg-gray-500 w-full flex-row ${selectedPizza && `bg-cover bg-center`} ${seletedPizza && `bg-${selectedPizza}`}'>
                <div className='flex flex-row flex-wrap'> 
                     <div className='flex w-full justify-center text-center'>
                         <h1 className='text-4xl font-bold py-4 text-center w-2/4 text-white'>Menu</h1>
@@ -28,7 +36,7 @@ export default function pizzeria () {
                    
                         <h2 className='text-2xl font-bold mb-4 text-gray-800'>tipos de pizza</h2>
                         <ul className='list-disc pl-4'>
-                            <li>4 Stagioni</li>
+                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('4Stagione')}>4 Stagioni</li>
                                <p>Pomodoro, mozzarella, 1/4 prosciutto cotto, 1/4 funghi champignon trifolati, 1/4 carciofi trifolati, 1/4 olive nere</p>
                             <li>Diavola</li>
                                <p>Pomodoro, Mozzarella, Spianata piccante</p>
