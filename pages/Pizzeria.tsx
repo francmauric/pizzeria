@@ -21,12 +21,12 @@ export default function pizzeria () {
             <main className='bg-gray-500 w-full flex-row'>
                <div className='flex flex-row flex-wrap'> 
                     <div className='flex w-full justify-center text-center'>
-                        <h1 className='text-center w-2/4 text-white'>Menu</h1>
+                        <h1 className='text-4xl font-bold py-4 text-center w-2/4 text-white'>Menu</h1>
                     </div>
-                    <div className='flex w-full justify-end'>
+                    <div className='flex w-full justify-end pr-4 pb-4'>
                       <div className='flex-col justify-end w-2/4 bg-gray-200 p-4 rounded-lg'>
                    
-                        <h2 className='text-xl font-bold mb-4'>tipos de pizza</h2>
+                        <h2 className='text-2xl font-bold mb-4 text-gray-800'>tipos de pizza</h2>
                         <ul className='list-disc pl-4'>
                             <li>4 Stagioni</li>
                                <p>Pomodoro, mozzarella, 1/4 prosciutto cotto, 1/4 funghi champignon trifolati, 1/4 carciofi trifolati, 1/4 olive nere</p>
@@ -64,7 +64,7 @@ export default function pizzeria () {
                </div>
               </div> 
             </main>
-            <h1 className="text-red-600">Bienvenido a la seccion pizzeria</h1>
+            
             <Footer/>
         </div>
     )
