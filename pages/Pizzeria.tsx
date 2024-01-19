@@ -40,11 +40,11 @@ export default function pizzeria () {
                                <p>Pomodoro, mozzarella, 1/4 prosciutto cotto, 1/4 funghi champignon trifolati, 1/4 carciofi trifolati, 1/4 olive nere</p>
                             <li className="cursor-pointer" onClick={() => handlePizzaSelect('diavola')}>Diavola</li>
                                <p>Pomodoro, Mozzarella, Spianata piccante</p>
-                            <li>4 Formaggi</li>  
+                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('4formaggi')}>4 Formaggi</li>  
                                <p>Pomodoro, Mozzarella, Edamer, Gorgonzola, Grana grattugiato</p> 
-                            <li>Affumicata</li>
+                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('affumicata')}>Affumicata</li>
                                <p>Pomodoro, Mozzarella, Speck, Scamorza affumicata</p>  
-                            <li>Alessandria</li> 
+                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('alesandria')}>Alessandria</li> 
                                <p>Pomodoro, Mozzarella, Salsiccia, Funghi porcini, Brie</p>  
                             <li>Amalfi</li>
                                <p>Mozzarella di Bufala, Acciughe, Olive nere, Pomodorini, Basilico</p>
