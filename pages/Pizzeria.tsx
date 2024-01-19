@@ -26,7 +26,7 @@ export default function pizzeria () {
                     <img className="w-full relative z-10 absolute inset-0 object-cover" src="images/pizzaheader.jpeg" alt="tavolo" />
                 </div>
             </div>
-            <main className='bg-gray-500 w-full flex-row ${selectedPizza && `bg-cover bg-center`} ${seletedPizza && `bg-${selectedPizza}`}'>
+            <main className={`bg-gray-500 w-full flex-row ${selectedPizza && `bg-cover bg-center`} ${selectedPizza && `bg-${selectedPizza}`}`}>
                <div className='flex flex-row flex-wrap'> 
                     <div className='flex w-full justify-center text-center'>
                         <h1 className='text-4xl font-bold py-4 text-center w-2/4 text-white'>Menu</h1>
@@ -38,7 +38,7 @@ export default function pizzeria () {
                         <ul className='list-disc pl-4'>
                             <li className="cursor-pointer" onClick={() => handlePizzaSelect('4Stagione')}>4 Stagioni</li>
                                <p>Pomodoro, mozzarella, 1/4 prosciutto cotto, 1/4 funghi champignon trifolati, 1/4 carciofi trifolati, 1/4 olive nere</p>
-                            <li>Diavola</li>
+                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('diavola')}>Diavola</li>
                                <p>Pomodoro, Mozzarella, Spianata piccante</p>
                             <li>4 Formaggi</li>  
                                <p>Pomodoro, Mozzarella, Edamer, Gorgonzola, Grana grattugiato</p> 
@@ -72,6 +72,7 @@ export default function pizzeria () {
                </div>
               </div> 
             </main>
+            
             
             <Footer/>
         </div>
