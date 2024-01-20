@@ -10,13 +10,12 @@ export default function NavBar() {
   const navbarVisible = typeof window !== 'undefined' ? useScrollEffect() : useScrollEffectServer();
   
   return (
-    <div className="hidden sm:flex ">
+    <div className={`hidden sm:flex ${navbarVisible ? "opacity-90" : "opacity-0"}`}>
       
       <div
-        className={`flex  flex-wrap justify-around fixed top-0 left-0 w-full transition-all duration-300   text-2xl  ${
-          navbarVisible ? "opacity-90" : "opacity-0"
-        }   `}
-      >
+        className="flex flex-wrap justify-around fixed top-0 left-0 w-full transition-all duration-300 text-2xl">
+          {navbarVisible && (
+            <>
         <div className="flex p-2">
           <img className="w-40 rounded-full" src="images/logo-pizza.png" alt="logo-pizza" />
         </div>
@@ -37,6 +36,8 @@ export default function NavBar() {
          
           </Link>
         </div>
+        </>
+        )}
       </div>
     </div>
   );
