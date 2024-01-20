@@ -34,3 +34,15 @@
 .bg-carciofi{
     background-image: url('/images/pizzas/carciofi.jpg');
 }
+.bg-fattoria{
+    background-image: url('/images/pizzas/fattoria.jpg');
+}
+.bg-funghi{
+    background-image: url('/images/pizzas/funghi.jpg');
+}
+.bg-margherita{
+    background-image: url('/images/pizzas/margherita.jpg');
+}
+.bg-napoli{
+    background-image: url('/images/pizzas/napoli.jpg');
+}

@@ -58,13 +58,13 @@ export default function pizzeria () {
                                <p>Pomodoro, Mozzarella, Prosciutto cotto , Funghi champignon trifolati, Carciofi trifolati</p>
                             <li className="cursor-pointer" onClick={() => handlePizzaSelect('carciofi')}>Carciofina</li>
                                <p>Pomodoro, Mozzarella, Carciofi trifolati</p>
-                            <li>Fattoria</li>
+                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('fattoria')}>Fattoria</li>
                                <p>Pomodoro, Mozzarella, Pancetta, Uovo</p>
-                            <li>Funghi</li>
+                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('funghi')}>Funghi</li>
                                <p>Pomodoro, Mozzarella, Funghi champignon trifolati</p>
-                            <li>Margherita</li>
+                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('margherita')}>Margherita</li>
                                <p>Pomodoro, Mozzarella</p>
-                            <li>Napoli</li>
+                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('napoli')}>Napoli</li>
                                <p>Pomodoro, Mozzarella, Acciughe</p>
                    </ul>
                    
