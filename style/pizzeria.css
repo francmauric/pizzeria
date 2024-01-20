@@ -16,4 +16,21 @@
 .bg-alesandria{
     background-image: url('/images/pizzas/alesandria.jpg');
 }
-
+.bg-amalfi{
+    background-image: url('/images/pizzas/amalfi.jpg');
+}
+.bg-americana{
+    background-image: url('/images/pizzas/americana.jpg');
+}
+.bg-bufala1{
+    background-image: url('/images/pizzas/bufala1.jpg');
+}
+.bg-caprese{
+    background-image: url('/images/pizzas/caprese.jpg');
+}
+.bg-capricciosa{
+    background-image: url('/images/pizzas/capricciosa.jpg');
+}
+.bg-carciofi{
+    background-image: url('/images/pizzas/carciofi.jpg');
+}

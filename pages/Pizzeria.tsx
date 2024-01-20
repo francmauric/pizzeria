@@ -46,17 +46,17 @@ export default function pizzeria () {
                                <p>Pomodoro, Mozzarella, Speck, Scamorza affumicata</p>  
                             <li className="cursor-pointer" onClick={() => handlePizzaSelect('alesandria')}>Alessandria</li> 
                                <p>Pomodoro, Mozzarella, Salsiccia, Funghi porcini, Brie</p>  
-                            <li>Amalfi</li>
+                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('amalfi')}>Amalfi</li>
                                <p>Mozzarella di Bufala, Acciughe, Olive nere, Pomodorini, Basilico</p>
-                            <li>Americana</li>
+                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('americana')}>Americana</li>
                                <p>Pomodoro, Mozzarella, Wurstel, Patate al forno*</p>
-                            <li>Bufala</li>
+                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('bufala1')}>Bufala</li>
                                <p>Pomodoro, Mozzarella di bufala, basilico</p>
-                            <li>Caprese</li>
+                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('caprese')}>Caprese</li>
                                <p>Pomodorini, Bufala, Origano</p>
-                            <li>Capricciosa</li>
+                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('capricciosa')}>Capricciosa</li>
                                <p>Pomodoro, Mozzarella, Prosciutto cotto , Funghi champignon trifolati, Carciofi trifolati</p>
-                            <li>Carciofina</li>
+                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('carciofi')}>Carciofina</li>
                                <p>Pomodoro, Mozzarella, Carciofi trifolati</p>
                             <li>Fattoria</li>
                                <p>Pomodoro, Mozzarella, Pancetta, Uovo</p>
