@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 import NavBarMobile from '@/components/NavBarMobile'
 import { useState } from 'react';
 import '@/style/pizzeria.css'
-import Banner from '@/components/banner'
+import Banner from '@/components/Banner'
 
 export default function pizzeria () {
    const [selectedPizza, setSelectedPizza] = useState<string | null>(null);

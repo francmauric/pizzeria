@@ -3,8 +3,8 @@
 export default function banner () {
 
     return(
-        <div className="w-full h-9">
-            <img src="images/banner-breakfast.jpg" alt="banner" />
+        <div className="w-full ">
+            <img className=" w-full h-52 bg-cover" src="images/banner-breakfast1.jpg" alt="banner" />
         </div>
     )
 }
