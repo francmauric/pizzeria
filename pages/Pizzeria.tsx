@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import NavBarMobile from '@/components/NavBarMobile'
 import { useState } from 'react';
 import '@/style/pizzeria.css'
+import Banner from '@/components/banner'
 
 export default function pizzeria () {
    const [selectedPizza, setSelectedPizza] = useState<string | null>(null);
@@ -25,6 +26,9 @@ export default function pizzeria () {
                 <div className="flex object-contain relative overflow-hidden">
                     <img className="w-full relative z-10 absolute inset-0 object-cover" src="images/pizzaheader.jpeg" alt="tavolo" />
                 </div>
+            </div>
+            <div className='w-full '>
+               <Banner />
             </div>
             <main className={`bg-gray-500 w-full flex-row ${selectedPizza && `bg-cover bg-center`} ${selectedPizza && `bg-${selectedPizza}`}`}>
                <div className='flex flex-row flex-wrap'> 
