@@ -7,6 +7,24 @@ import { useState } from 'react';
 import '@/style/pizzeria.css'
 import Banner from '@/components/Banner'
 
+type PizzaDescriptions = {
+   '4-Stagione': string;
+   Diavola: string;
+   '4-Formaggi': string;
+   Affumicata: string;
+   Alesandria: string;
+   Amalfi: string;
+   Americana: string;
+   Bufala1: string
+   Caprese: string;
+   Capricciosa: string;
+   Carciofi: string;
+   Fattoria: string;
+   Funghi: string;
+   Margherita: string;
+   Napoli: string;
+ };
+
 export default function pizzeria () {
    const [selectedPizza, setSelectedPizza] = useState<string | null>(null);
 
@@ -14,6 +32,25 @@ export default function pizzeria () {
       setSelectedPizza(pizza);
    };
    console.log(selectedPizza)
+
+   const pizzaDescriptions = {
+      '4-Stagione': 'Pomodoro, mozzarella, 1/4 prosciutto cotto, 1/4 funghi champignon trifolati, 1/4 carciofi trifolati, 1/4 olive nere',
+      'Diavola': 'Pomodoro, Mozzarella, Spianata piccante',
+      '4-Formaggi': 'Pomodoro, Mozzarella, Edamer, Gorgonzola, Grana grattugiato',
+      'Affumicata': 'Pomodoro, Mozzarella, Speck, Scamorza affumicata',
+      'Alesandria': 'Pomodoro, Mozzarella, Salsiccia, Funghi porcini, Brie',
+      'Amalfi': 'Mozzarella di Bufala, Acciughe, Olive nere, Pomodorini, Basilico',
+      'Americana': 'Pomodoro, Mozzarella, Wurstel, Patate al forno*',
+      'Bufala1': 'Pomodoro, Mozzarella di bufala, basilico',
+      'Caprese': 'Pomodorini, Bufala, Origano',
+      'Capricciosa': 'Pomodoro, Mozzarella, Prosciutto cotto , Funghi champignon trifolati, Carciofi trifolati',
+      'Carciofi': 'Pomodoro, Mozzarella, Carciofi trifolati',
+      'Fattoria': 'Pomodoro, Mozzarella, Pancetta, Uovo',
+      'Funghi': 'Pomodoro, Mozzarella, Funghi champignon trifolati',
+      'Margherita': 'Pomodoro, Mozzarella',
+      'Napoli': 'Pomodoro, Mozzarella, Acciughe',
+    };
+  
 
     return(
         <div>
@@ -40,37 +77,17 @@ export default function pizzeria () {
                    
                         <h2 className='text-2xl font-bold mb-4 text-gray-800'>tipos de pizza</h2>
                         <ul className='list-disc pl-4'>
-                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('4Stagione')}>4 Stagioni</li>
-                               <p>Pomodoro, mozzarella, 1/4 prosciutto cotto, 1/4 funghi champignon trifolati, 1/4 carciofi trifolati, 1/4 olive nere</p>
-                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('diavola')}>Diavola</li>
-                               <p>Pomodoro, Mozzarella, Spianata piccante</p>
-                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('4formaggi')}>4 Formaggi</li>  
-                               <p>Pomodoro, Mozzarella, Edamer, Gorgonzola, Grana grattugiato</p> 
-                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('affumicata')}>Affumicata</li>
-                               <p>Pomodoro, Mozzarella, Speck, Scamorza affumicata</p>  
-                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('alesandria')}>Alessandria</li> 
-                               <p>Pomodoro, Mozzarella, Salsiccia, Funghi porcini, Brie</p>  
-                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('amalfi')}>Amalfi</li>
-                               <p>Mozzarella di Bufala, Acciughe, Olive nere, Pomodorini, Basilico</p>
-                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('americana')}>Americana</li>
-                               <p>Pomodoro, Mozzarella, Wurstel, Patate al forno*</p>
-                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('bufala1')}>Bufala</li>
-                               <p>Pomodoro, Mozzarella di bufala, basilico</p>
-                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('caprese')}>Caprese</li>
-                               <p>Pomodorini, Bufala, Origano</p>
-                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('capricciosa')}>Capricciosa</li>
-                               <p>Pomodoro, Mozzarella, Prosciutto cotto , Funghi champignon trifolati, Carciofi trifolati</p>
-                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('carciofi')}>Carciofina</li>
-                               <p>Pomodoro, Mozzarella, Carciofi trifolati</p>
-                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('fattoria')}>Fattoria</li>
-                               <p>Pomodoro, Mozzarella, Pancetta, Uovo</p>
-                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('funghi')}>Funghi</li>
-                               <p>Pomodoro, Mozzarella, Funghi champignon trifolati</p>
-                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('margherita')}>Margherita</li>
-                               <p>Pomodoro, Mozzarella</p>
-                            <li className="cursor-pointer" onClick={() => handlePizzaSelect('napoli')}>Napoli</li>
-                               <p>Pomodoro, Mozzarella, Acciughe</p>
-                   </ul>
+                {Object.keys(pizzaDescriptions).map((pizza) => (
+                  <li
+                    key={pizza}
+                    className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${selectedPizza === pizza ? 'bg-blue-500 text-white' : 'bg-gray-300 hover:bg-gray-400'} transition-all duration-300`}
+                    onClick={() => handlePizzaSelect(pizza as keyof PizzaDescriptions)}
+                  >
+                    {pizza}
+                    <p className="text-sm text-gray-600">{pizzaDescriptions[pizza as keyof PizzaDescriptions]}</p>
+                  </li>
+                ))}
+              </ul>
                    
                  </div>
                </div>
