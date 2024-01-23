@@ -39,7 +39,26 @@ export default function pizzeria () {
    const handlePizzaSelect = (pizza: string) => {
       setSelectedPizza(pizza);
    };
-   console.log(selectedPizza)
+  
+   const pizzaDescriptions = {
+    '4Stagione': 'Pomodoro, mozzarella, 1/4 prosciutto cotto, 1/4 funghi champignon trifolati, 1/4 carciofi trifolati, 1/4 olive nere',
+    'diavola': 'Pomodoro, Mozzarella, Spianata piccante',
+    '4formaggi': 'Pomodoro, Mozzarella, Edamer, Gorgonzola, Grana grattugiato',
+    'affumicata': 'Pomodoro, Mozzarella, Speck, Scamorza affumicata',
+    'alesandria': 'Pomodoro, Mozzarella, Salsiccia, Funghi porcini, Brie',
+    'amalfi': 'Mozzarella di Bufala, Acciughe, Olive nere, Pomodorini, Basilico',
+    'americana': 'Pomodoro, Mozzarella, Wurstel, Patate al forno*',
+    'bufala1': 'Pomodoro, Mozzarella di bufala, basilico',
+    'caprese': 'Pomodorini, Bufala, Origano',
+    'capricciosa': 'Pomodoro, Mozzarella, Prosciutto cotto , Funghi champignon trifolati, Carciofi trifolati',
+    'carciofi': 'Pomodoro, Mozzarella, Carciofi trifolati',
+    'fattoria': 'Pomodoro, Mozzarella, Pancetta, Uovo',
+    'funghi': 'Pomodoro, Mozzarella, Funghi champignon trifolati',
+    'margherita': 'Pomodoro, Mozzarella',
+    'napoli': 'Pomodoro, Mozzarella, Acciughe',
+  };
+
+
 
     return(
         <div>
@@ -66,13 +85,14 @@ export default function pizzeria () {
                    
                         <h2 className='text-2xl font-bold mb-4 text-gray-800'>tipos de pizza</h2>
                         <ul className='list-disc pl-4'>
-                {['4Stagione', 'diavola', '4formaggi', 'affumicata', 'alesandria', 'amalfi', 'americana', 'bufala1', 'caprese', 'capricciosa', 'carciofi', 'fattoria', 'funghi', 'margherita', 'napoli'].map((pizza) => (
+                {Object.keys(pizzaDescriptions).map((pizza) => (
                   <li
                     key={pizza}
                     className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${selectedPizza === pizza ? 'bg-blue-500 text-white' : 'bg-gray-300 hover:bg-gray-400'} transition-all duration-300`}
                     onClick={() => handlePizzaSelect(pizza)}
                   >
                     {pizza}
+                    <p className="text-sm text-gray-600">{pizzaDescriptions[pizza]}</p>
                   </li>
                 ))}
               </ul>
