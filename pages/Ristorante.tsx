@@ -3,6 +3,7 @@ import '@/style/globals.css'
 import NavBar from "@/components/NavBar"
 import Footer from '@/components/Footer'
 import NavBarMobile from '@/components/NavBarMobile'
+import Banner from '@/components/Banner'
 
 export default function ristorante() {
 
@@ -19,6 +20,14 @@ export default function ristorante() {
                 </div>
             </div>
             </div>
+            <div>
+                <Banner />
+            </div>
+            <main>
+                <div>
+                    <h1>aqui va el menu</h1>
+                </div>
+            </main>
             <Footer />
         </div>
         )
