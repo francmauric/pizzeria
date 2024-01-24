@@ -3,6 +3,8 @@ import NavBar from '@/components/NavBar'
 import Link from "next/link"
 import Footer from '@/components/Footer'
 import NavBarMobile from '@/components/NavBarMobile'
+import Banner from '@/components/Banner'
+
 
 export default function bar () {
 
@@ -18,7 +20,14 @@ export default function bar () {
                     <img className="w-full relative z-10 absolute inset-0 object-cover" src="images/cocktailbar.jpg" alt="tavolo" />
                 </div>
             </div>
-            <h1>bienvenidos a la seccion de bar</h1>
+            <div>
+                <Banner />
+            </div>
+            <main>
+                <div>
+                    <h1>menu</h1>
+                </div>
+            </main>
             <Footer/>
         </div>
     )
