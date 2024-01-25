@@ -23,7 +23,8 @@ export default function bar () {
             <div>
                 <Banner />
             </div>
-            <main className='w-full bg-url'>
+            <main className="w-full ">
+            <img className=" w-full h-52 bg-cover" src="images/fondo-madera.jpg" alt="madera" />
                 <div>
                     <div>
                         <h1>menu</h1>
