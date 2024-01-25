@@ -23,9 +23,14 @@ export default function bar () {
             <div>
                 <Banner />
             </div>
-            <main>
+            <main className='w-full bg-url'>
                 <div>
-                    <h1>menu</h1>
+                    <div>
+                        <h1>menu</h1>
+                    </div>
+                    <div>
+                        <h2>lista di cocktails</h2>
+                    </div>
                 </div>
             </main>
             <Footer/>
