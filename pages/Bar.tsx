@@ -34,6 +34,7 @@ export default function bar () {
                     </div>
                 </div>
             </main>
+            
             <Footer/>
         </div>
     )
