@@ -23,14 +23,24 @@ export default function bar () {
             <div>
                 <Banner />
             </div>
-            <main className="w-full ">
-            <img className=" w-full h-52 bg-cover" src="images/fondo-madera.jpg" alt="madera" />
-                <div>
-                    <div>
-                        <h1>menu</h1>
+            <main className="w-full relative ">
+            <img className=" w-full h-96 object-cover absolute inset-0" src="images/fondo-madera.jpg" alt="madera" />
+                <div className='relative z-10'>
+                    <div className='w-full h-10 '>
+                        <h1 className='text-4xl text-white text-center'>Menu</h1>
                     </div>
-                    <div>
-                        <h2>lista di cocktails</h2>
+                    <div className='w-full '>
+                        <div>
+                             <h2 className='text-3xl text-white '>lista di cocktails</h2>
+                        </div>
+                        <div>
+                            <ul className='text-white'>
+                                <li>Negroni</li>
+                                <li>Margarita</li>
+                                <li>Piña colada</li>
+                                <li></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </main>
