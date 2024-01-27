@@ -45,7 +45,7 @@ export default function bar () {
                         </div> 
                         <div className='w-2/4 h-56'>
                             <h1 className='text-white'>aqui va la imagen</h1>
-                            <img src="" alt="" />
+                            <img className='p-10 rounded-full' src="/images/cocktails/negroni1.jpg" alt="" />
                         </div>
                     </div>
                 </div>
