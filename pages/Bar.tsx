@@ -30,12 +30,12 @@ export default function bar () {
                         <h1 className='text-4xl text-white text-center p-5'>Menu</h1>
                     </div>
                     <div className='w-full flex flex-row-reverse'>
-                        <div className='w-2/4'>
+                        <div className='w-2/4 flex-col justify-end bg-gray-600 mx-52 rounded-lg'>
                             <div>
-                                <h2 className='text-3xl text-white '>lista di cocktails</h2>
+                                <h2 className='text-center text-3xl text-white '>Lista di cocktails</h2>
                             </div>
                             <div>
-                                <ul className='text-white'>
+                                <ul className='text-white pl-10'>
                                     <li>Negroni</li>
                                     <li>Margarita</li>
                                     <li>Piña colada</li>
