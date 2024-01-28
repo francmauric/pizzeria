@@ -40,6 +40,19 @@ export default function bar () {
                                     <li>Margarita</li>
                                     <li>Piña colada</li>
                                     <li>Mojito</li>
+                                    <li>Negroni Sbagliato</li>
+                                    <li>Sex on the beach</li>
+                                    <li>Daiquiri</li>
+                                    <li>Martini</li>
+                                    <li>Long Island</li>
+                                    <li>Bloody Mary</li>
+                                    <li>Mai Tai</li>
+                                    <li>Tom Collins</li>
+                                    <li>Aperol Spritz</li>
+                                    <li>Hugo Spritz</li>
+                                    <li>Old Fashioned</li>
+                                    <li>Expresso Martini</li>
+                                    <li>Caipiriña</li>
                                 </ul>
                             </div>
                         </div> 
