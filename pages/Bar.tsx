@@ -11,13 +11,14 @@ type CocktailDescriptions = {
   Margarita: string;
   "Piña colada": string;
   Mojito: string;
-  Negto: string;
+  "Negroni Sbagliato": string;
   "Sex on the beach": string;
   Daiquiri: string;
   Martini: string;
   "Long Island": string;
   "Bloody Mary": string;
   "Mai Tai": string;
+  "Tom Collins": string;
   "Aperol Spritz": string;
   "Hugo Spritz": string;
   "Old Fashioned": string;
@@ -29,15 +30,28 @@ export default function bar() {
  const {selectedCocktail, setSelectedCocktail} = useState<keyof CocktailDescriptions | null>(null);
 
 const handleCocktailSelect = (cocktail: keyof CocktailDescriptions) => {
-  setSelectedCocktail(cocktail):
+  setSelectedCocktail(cocktail);
 }
 
 const cocktailDescriptions: CocktailDescriptions = {
   Negroni: "gin, campari, vermuth",
   Margarita: "tequila,lime,triple sec",
   "Piña colada": "Run blanco, coconut cream, anana ",
-  
-}
+  Mojito: "run blanco, lime, azucar, menta, soda",
+  "Negroni Sbagliato": "campari, vermuth, proseco",
+  "Sex on the beach": "vodka, jugo de naranja, licor de durazno, granadina",
+  Daiquiri: "ron blanco, jugo de lima, azucar",
+  Martini: "gin, dry vermuth martini",
+  "Long Island": "vodka, tequila, ron blanco, gin, coca-cola, contreau, jugo de limon, syrup",
+  "Bloody Mary": "vodka, jugo de tomate, jugo de limon, worcestershire sauce, tabasco, sal , pimienta",
+  "Mai Tai": "rum blanco, rum oscuro, orange curacao, orgeat syrup, jugo de limon, syrup",
+  "Tom Collins": "gin, jugo de limon, syrup, soda",
+  "Aperol Spritz": "aperol, proseco, soda",
+  "Hugo Spritz": "sirope de flores de sauco, proseco, menta, soda",
+  "Old Fashioned": "whiskey rye o bourbon, azucar, angostura, agua",
+  "Expresso Martini": "vodka, licor de cafe (kahlua), syrup, cafe",
+  Caipiriña: "cachaha, jugo de limon, azucar",
+};
 
   return (
     <div>
