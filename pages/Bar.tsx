@@ -4,8 +4,41 @@ import Link from "next/link";
 import Footer from "@/components/Footer";
 import NavBarMobile from "@/components/NavBarMobile";
 import Banner from "@/components/Banner";
+import { useState } from "react";
+
+type CocktailDescriptions = {
+  Negroni: string;
+  Margarita: string;
+  "Piña colada": string;
+  Mojito: string;
+  Negto: string;
+  "Sex on the beach": string;
+  Daiquiri: string;
+  Martini: string;
+  "Long Island": string;
+  "Bloody Mary": string;
+  "Mai Tai": string;
+  "Aperol Spritz": string;
+  "Hugo Spritz": string;
+  "Old Fashioned": string;
+  "Expresso Martini": string;
+  "Caipiriña": string;
+};
 
 export default function bar() {
+ const {selectedCocktail, setSelectedCocktail} = useState<keyof CocktailDescriptions | null>(null);
+
+const handleCocktailSelect = (cocktail: keyof CocktailDescriptions) => {
+  setSelectedCocktail(cocktail):
+}
+
+const cocktailDescriptions: CocktailDescriptions = {
+  Negroni: "gin, campari, vermuth",
+  Margarita: "tequila,lime,triple sec",
+  "Piña colada": "Run blanco, coconut cream, anana ",
+  
+}
+
   return (
     <div>
       <div className="flex flex-col relative">
@@ -23,7 +56,7 @@ export default function bar() {
       </div>
       <div>
         <Banner />
-      </div>
+      </div> 
       <main className="w-full relative ">
         <div>
             <img
