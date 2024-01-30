@@ -5,11 +5,12 @@ import Footer from "@/components/Footer";
 import NavBarMobile from "@/components/NavBarMobile";
 import Banner from "@/components/Banner";
 import { useState } from "react";
+import "@/style/bar.css"
 
 type CocktailDescriptions = {
   Negroni: string;
   Margarita: string;
-  "Piña colada": string;
+  "Piña-colada": string;
   Mojito: string;
   "Negroni Sbagliato": string;
   "Sex on the beach": string;
@@ -27,7 +28,7 @@ type CocktailDescriptions = {
 };
 
 export default function bar() {
- const {selectedCocktail, setSelectedCocktail} = useState<keyof CocktailDescriptions | null>(null);
+ const [selectedCocktail, setSelectedCocktail] = useState<keyof CocktailDescriptions | null>(null);
 
 const handleCocktailSelect = (cocktail: keyof CocktailDescriptions) => {
   setSelectedCocktail(cocktail);
@@ -92,31 +93,30 @@ const cocktailDescriptions: CocktailDescriptions = {
               </div>
               <div>
                 <ul className="text-white pl-10">
-                  <li>Negroni</li>
-                  <li>Margarita</li>
-                  <li>Piña colada</li>
-                  <li>Mojito</li>
-                  <li>Negroni Sbagliato</li>
-                  <li>Sex on the beach</li>
-                  <li>Daiquiri</li>
-                  <li>Martini</li>
-                  <li>Long Island</li>
-                  <li>Bloody Mary</li>
-                  <li>Mai Tai</li>
-                  <li>Tom Collins</li>
-                  <li>Aperol Spritz</li>
-                  <li>Hugo Spritz</li>
-                  <li>Old Fashioned</li>
-                  <li>Expresso Martini</li>
-                  <li>Caipiriña</li>
+                  {Object.keys(cocktailDescriptions).map((cocktail) => (
+                    <li
+                      key={cocktail}
+                      className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
+                        selectedCocktail === cocktail
+                          ? "bg-blue-500 text-white"
+                          : "bg-gray-300 hover:bg-gray-400"
+                      } transition-all duration-300`}
+                      onClick={() => handleCocktailSelect(cocktail as keyof CocktailDescriptions)}
+                    >
+                      {cocktail}
+                      <p className="text-sm text-gray-600">
+                        {cocktailDescriptions[cocktail as keyof CocktailDescriptions]}
+                      </p>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>
             <div className="w-2/4 h-56">
-              <h1 className="text-white">aqui va la imagen</h1>
+              <h1 className="text-white">{selectedCocktail}</h1>
               <img
                 className="p-10 rounded-full"
-                src="/images/cocktails/negroni1.jpg"
+                src={`/images/cocktails/${selectedCocktail?.toLowerCase()}.jpg`}
                 alt=""
               />
             </div>
