@@ -24,7 +24,7 @@ type CocktailDescriptions = {
   "Hugo Spritz": string;
   "Old Fashioned": string;
   "Expresso Martini": string;
-  "Caipiriña": string;
+  "Caipirinha": string;
 };
 
 export default function bar() {
@@ -51,7 +51,7 @@ const cocktailDescriptions: CocktailDescriptions = {
   "Hugo Spritz": "sirope de flores de sauco, proseco, menta, soda",
   "Old Fashioned": "whiskey rye o bourbon, azucar, angostura, agua",
   "Expresso Martini": "vodka, licor de cafe (kahlua), syrup, cafe",
-  Caipiriña: "cachaha, jugo de limon, azucar",
+  Caipirinha: "cachaha, jugo de limon, azucar",
 };
 
 const getImageFileName = (cocktail: string) => {
@@ -117,8 +117,8 @@ const getImageFileName = (cocktail: string) => {
                 </ul>
               </div>
             </div>
-            <div className="w-3/4 h-56">
-              <h1 className="text-white">{selectedCocktail}</h1>
+            <div className="w-3/4 h-56 flex  flex-col">
+              <h1 className="text-white text-center text-3xl">{selectedCocktail}</h1>
               <img
                 className="p-6 rounded-full"
                 src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`}
