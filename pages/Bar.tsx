@@ -10,7 +10,7 @@ import "@/style/bar.css"
 type CocktailDescriptions = {
   Negroni: string;
   Margarita: string;
-  "Piña-colada": string;
+  "Pina colada": string;
   Mojito: string;
   "Negroni Sbagliato": string;
   "Sex on the beach": string;
@@ -37,7 +37,7 @@ const handleCocktailSelect = (cocktail: keyof CocktailDescriptions) => {
 const cocktailDescriptions: CocktailDescriptions = {
   Negroni: "gin, campari, vermuth",
   Margarita: "tequila,lime,triple sec",
-  "Piña colada": "Run blanco, coconut cream, anana ",
+  "Pina colada": "Run blanco, coconut cream, anana ",
   Mojito: "run blanco, lime, azucar, menta, soda",
   "Negroni Sbagliato": "campari, vermuth, proseco",
   "Sex on the beach": "vodka, jugo de naranja, licor de durazno, granadina",
@@ -53,6 +53,11 @@ const cocktailDescriptions: CocktailDescriptions = {
   "Expresso Martini": "vodka, licor de cafe (kahlua), syrup, cafe",
   Caipiriña: "cachaha, jugo de limon, azucar",
 };
+
+const getImageFileName = (cocktail: string) => {
+  
+  return cocktail.toLowerCase().replace(/ /g,"-") + ".jpg";
+}
 
   return (
     <div>
@@ -112,11 +117,11 @@ const cocktailDescriptions: CocktailDescriptions = {
                 </ul>
               </div>
             </div>
-            <div className="w-2/4 h-56">
+            <div className="w-3/4 h-56">
               <h1 className="text-white">{selectedCocktail}</h1>
               <img
-                className="p-10 rounded-full"
-                src={`/images/cocktails/${selectedCocktail?.toLowerCase()}.jpg`}
+                className="p-6 rounded-full"
+                src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`}
                 alt=""
               />
             </div>
