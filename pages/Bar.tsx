@@ -77,20 +77,14 @@ const getImageFileName = (cocktail: string) => {
       <div>
         <Banner />
       </div> 
-      <main className="w-full relative ">
-        <div>
-            <img
-            className=" w-full object-cover absolute inset-0"
-            src="images/fondo-madera.jpg"
-            alt="madera"
-            />
-        </div>
+      <main className="w-full relative h-screen bg-cover bg-center" style={{backgroundImage:"url('images/fondo-madera.jpg')"}}>
+        
         <div className="relative z-10">
           <div className="w-full  ">
             <h1 className="text-4xl text-white text-center p-5">Menu</h1>
           </div>
           <div className="w-full flex flex-row-reverse">
-            <div className="w-2/4 flex-col justify-end bg-gray-600 mx-52 rounded-lg">
+            <div className="w-2/4 flex-col justify-end bg-gray-600 mx-52 rounded-lg overflow-y-auto max-h-96">
               <div>
                 <h2 className="text-center text-3xl text-white ">
                   Lista di cocktails
@@ -130,7 +124,7 @@ const getImageFileName = (cocktail: string) => {
       </main>
       <div>
 
-      <Footer />
+      <Footer style={{ zIndex: 2  }} />
       </div>
     </div>
   );
