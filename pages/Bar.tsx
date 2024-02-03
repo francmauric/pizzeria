@@ -84,14 +84,14 @@ const getImageFileName = (cocktail: string) => {
             <h1 className="text-4xl text-white text-center p-5">Menu</h1>
           </div>
           <div className="w-full flex flex-row-reverse">
-            <div className="w-2/4 flex-col justify-end bg-gray-600 mx-52 rounded-lg overflow-y-auto max-h-96 h-128">
+            <div className="w-2/4 flex-col justify-end bg-gray-600 mx-40 rounded-lg ">
               <div>
                 <h2 className="text-center text-3xl text-white ">
                   Lista di cocktails
                 </h2>
               </div>
               <div>
-                <ul className="text-white pl-10">
+                <ul className="text-white pl-10 overflow-y-auto h-96">
                   {Object.keys(cocktailDescriptions).map((cocktail) => (
                     <li
                       key={cocktail}
