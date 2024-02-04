@@ -76,14 +76,14 @@ export default function pizzeria() {
           selectedPizza && `bg-cover bg-center`
         } ${selectedPizza && `bg-${selectedPizza}`}`}
       >
-        <div className="flex flex-row flex-wrap">
-          <div className="flex w-full justify-center text-center">
-            <h1 className="text-4xl font-bold py-4 text-center w-2/4 text-white">
+        <div className="flex flex-col sm:flex-row flex-wrap">
+          <div className="flex w-full sm:w-2/4 justify-center text-center">
+            <h1 className="text-4xl font-bold py-4 text-center w-full sm:w-2/4 text-white">
               Menu
             </h1>
           </div>
-          <div className="flex w-full justify-end pr-4 pb-4">
-            <div className="flex-col justify-end w-2/4 bg-gray-200 p-4 rounded-lg">
+          <div className="flex w-full sm:w-2/4  justify-end pr-4 pb-4">
+            <div className="flex-col justify-end w-full sm:w-2/4 bg-gray-200 p-4 rounded-lg">
               <h2 className="text-2xl font-bold mb-4 text-gray-800">
                 tipos de pizza
               </h2>

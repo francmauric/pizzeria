@@ -114,7 +114,7 @@ const getImageFileName = (cocktail: string) => {
             <div className="w-3/4 flex  flex-col">
               <h1 className="text-white text-center text-3xl">{selectedCocktail}</h1>
               <img
-                className="p-6 rounded-full"
+                className="px-2 rounded-full max-w-full max-h-96"
                 src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`}
                 alt=""
               />
