@@ -84,9 +84,9 @@ const getImageFileName = (cocktail: string) => {
             <h1 className="text-4xl text-white text-center p-5">Menu</h1>
           </div>
           <div className="w-full flex flex-row-reverse">
-            <div className="w-2/4 flex-col justify-end bg-gray-600 mx-40 rounded-lg ">
+            <div className="w-2/4 flex-col justify-end bg-gray-600  px-10 rounded-lg ">
               <div>
-                <h2 className="text-center text-3xl text-white ">
+                <h2 className="text-center text-3xl py-8 text-white ">
                   Lista di cocktails
                 </h2>
               </div>
@@ -112,7 +112,7 @@ const getImageFileName = (cocktail: string) => {
               </div>
             </div>
             <div className="w-3/4 flex  flex-col">
-              <h1 className="text-white text-center text-3xl">{selectedCocktail}</h1>
+              <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
               <img
                 className="px-2 rounded-full max-w-full max-h-96"
                 src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`}
