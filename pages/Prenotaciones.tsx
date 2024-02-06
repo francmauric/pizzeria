@@ -111,10 +111,11 @@ export default function pizzeria() {
             </h1>
           </div>
           <div className="flex w-full sm:w-2/4  justify-end pr-4 pb-4">
-            <div className="flex-col justify-end w-full sm:w-2/4 bg-gray-200 p-4 rounded-lg">
+            <div className="w-full sm:w-2/4 bg-gray-200 p-4 rounded-lg sm:bg-opacity-100 bg-opacity-50">
               <h2 className="text-2xl font-bold mb-4 text-gray-800">
                 tipos de pizza
               </h2>
+              <div className="sm:hidden">
               <Slider dots infinite speed={500} slidesToShow={1}>
                 {Object.keys(pizzaDescriptions).map((pizza) => (
                   <li
@@ -135,6 +136,30 @@ export default function pizzeria() {
                   </li>
                 ))}
               </Slider>
+              </div>
+              {/* vista para escritorio */}
+              <div className="hidden sm:block">
+                <ul>
+              {Object.keys(pizzaDescriptions).map((pizza) => (
+                  <li
+                    key={pizza}
+                    className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
+                      selectedPizza === pizza
+                        ? "bg-blue-500 text-white"
+                        : "bg-gray-300 hover:bg-gray-400"
+                    } transition-all duration-300`}
+                    onClick={() =>
+                      handlePizzaSelect(pizza as keyof PizzaDescriptions)
+                    }
+                  >
+                    {pizza}
+                    <p className="text-sm text-gray-600">
+                      {pizzaDescriptions[pizza as keyof PizzaDescriptions]}
+                    </p>
+                  </li>
+                ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
