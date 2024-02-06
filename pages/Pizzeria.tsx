@@ -6,6 +6,11 @@ import NavBarMobile from "@/components/NavBarMobile";
 import { useState } from "react";
 import "@/style/pizzeria.css";
 import Banner from "@/components/Banner";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+import Slider from "react-slick";
+
 
 type PizzaDescriptions = {
   "4-Stagione": string;
