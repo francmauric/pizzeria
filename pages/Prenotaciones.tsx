@@ -21,82 +21,86 @@ export default function prenotaciones () {
     )
 }
  */
-import "@/style/globals.css";
 
+import "@/style/globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import NavBarMobile from "@/components/NavBarMobile";
-import { useState, useEffect } from "react";
-import "@/style/pizzeria.css";
 import Banner from "@/components/Banner";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
+import { useState } from "react";
+import "@/style/bar.css"
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 
-type PizzaDescriptions = {
-  "4-Stagione": string;
-  Diavola: string;
-  "4-Formaggi": string;
-  Affumicata: string;
-  Alesandria: string;
-  Amalfi: string;
-  Americana: string;
-  Bufala1: string;
-  Caprese: string;
-  Capricciosa: string;
-  Carciofi: string;
-  Fattoria: string;
-  Funghi: string;
-  Margherita: string;
-  Napoli: string;
+
+type CocktailDescriptions = {
+  Negroni: string;
+  Margarita: string;
+  "Pina colada": string;
+  Mojito: string;
+  "Negroni Sbagliato": string;
+  "Sex on the beach": string;
+  Daiquiri: string;
+  Martini: string;
+  "Long Island": string;
+  "Bloody Mary": string;
+  "Mai Tai": string;
+  "Tom Collins": string;
+  "Aperol Spritz": string;
+  "Hugo Spritz": string;
+  "Old Fashioned": string;
+  "Expresso Martini": string;
+  "Caipirinha": string;
 };
 
-export default function pizzeria() {
-  const [selectedPizza, setSelectedPizza] = useState<string | null>(null);
-  const [sliderIndex, setSliderIndex] = useState<number>(0);
+export default function bar() {
+ const [selectedCocktail, setSelectedCocktail] = useState<keyof CocktailDescriptions | null>(null);
 
+const handleCocktailSelect = (cocktail: keyof CocktailDescriptions) => {
+  setSelectedCocktail(cocktail);
+}
 
-  const handlePizzaSelect = (pizza: string) => {
-    setSelectedPizza(pizza);
-  };
-  console.log(selectedPizza);
+const cocktailDescriptions: CocktailDescriptions = {
+  Negroni: "gin, campari, vermuth",
+  Margarita: "tequila,lime,triple sec",
+  "Pina colada": "Run blanco, coconut cream, anana ",
+  Mojito: "run blanco, lime, azucar, menta, soda",
+  "Negroni Sbagliato": "campari, vermuth, proseco",
+  "Sex on the beach": "vodka, jugo de naranja, licor de durazno, granadina",
+  Daiquiri: "ron blanco, jugo de lima, azucar",
+  Martini: "gin, dry vermuth martini",
+  "Long Island": "vodka, tequila, ron blanco, gin, coca-cola, contreau, jugo de limon, syrup",
+  "Bloody Mary": "vodka, jugo de tomate, jugo de limon, worcestershire sauce, tabasco, sal , pimienta",
+  "Mai Tai": "rum blanco, rum oscuro, orange curacao, orgeat syrup, jugo de limon, syrup",
+  "Tom Collins": "gin, jugo de limon, syrup, soda",
+  "Aperol Spritz": "aperol, proseco, soda",
+  "Hugo Spritz": "sirope de flores de sauco, proseco, menta, soda",
+  "Old Fashioned": "whiskey rye o bourbon, azucar, angostura, agua",
+  "Expresso Martini": "vodka, licor de cafe (kahlua), syrup, cafe",
+  Caipirinha: "cachaha, jugo de limon, azucar",
+};
 
-  useEffect(() => {
-    handlePizzaSelect(Object.keys(pizzaDescriptions)[sliderIndex]);
-  }, [sliderIndex]);
+const getImageFileName = (cocktail: string) => {
+  
+  return cocktail.toLowerCase().replace(/ /g,"-") + ".jpg";
+}
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    afterChange: (current: number) => {
-      setSliderIndex(current);
-    }
-  };
-
-
-  const pizzaDescriptions = {
-    "4-Stagione":
-      "Pomodoro, mozzarella, 1/4 prosciutto cotto, 1/4 funghi champignon trifolati, 1/4 carciofi trifolati, 1/4 olive nere",
-    Diavola: "Pomodoro, Mozzarella, Spianata piccante",
-    "4-Formaggi": "Pomodoro, Mozzarella, Edamer, Gorgonzola, Grana grattugiato",
-    Affumicata: "Pomodoro, Mozzarella, Speck, Scamorza affumicata",
-    Alesandria: "Pomodoro, Mozzarella, Salsiccia, Funghi porcini, Brie",
-    Amalfi: "Mozzarella di Bufala, Acciughe, Olive nere, Pomodorini, Basilico",
-    Americana: "Pomodoro, Mozzarella, Wurstel, Patate al forno*",
-    Bufala1: "Pomodoro, Mozzarella di bufala, basilico",
-    Caprese: "Pomodorini, Bufala, Origano",
-    Capricciosa:
-      "Pomodoro, Mozzarella, Prosciutto cotto , Funghi champignon trifolati, Carciofi trifolati",
-    Carciofi: "Pomodoro, Mozzarella, Carciofi trifolati",
-    Fattoria: "Pomodoro, Mozzarella, Pancetta, Uovo",
-    Funghi: "Pomodoro, Mozzarella, Funghi champignon trifolati",
-    Margherita: "Pomodoro, Mozzarella",
-    Napoli: "Pomodoro, Mozzarella, Acciughe",
-  };
+const settings = {
+  dots: true,
+  infinite: true,
+  speed:500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  swipeToSlide: true,
+  centerMode: true,
+  centerPadding: "60px",
+  className: "center",
+  afterChange: (current: number) => {
+    handleCocktailSelect(Object.keys(cocktailDescriptions)[current]);
+  }
+};
 
   return (
     <div>
@@ -108,81 +112,85 @@ export default function pizzeria() {
         <div className="flex object-contain relative overflow-hidden">
           <img
             className="w-full relative z-10 absolute inset-0 object-cover"
-            src="images/pizzaheader.jpeg"
+            src="images/cocktailbar.jpg"
             alt="tavolo"
           />
         </div>
       </div>
-      <div className="w-full ">
+      <div>
         <Banner />
-      </div>
-      <main
-        className={`bg-gray-500 w-full flex-row ${
-          selectedPizza && `bg-cover bg-center`
-        } ${selectedPizza && `bg-${selectedPizza}`}`}
-      >
-        <div className="flex flex-col sm:flex-row flex-wrap">
-          <div className="flex w-full sm:w-2/4 justify-center text-center">
-            <h1 className="text-4xl font-bold py-4 text-center w-full sm:w-2/4 text-white">
-              Menu
-            </h1>
+      </div> 
+      <main className="w-full relative h-screen bg-cover bg-center" style={{backgroundImage:"url('images/fondo-madera.jpg')"}}>
+        
+        <div className="relative z-10">
+          <div className="w-full  ">
+            <h1 className="text-4xl text-white text-center p-5">Menu</h1>
           </div>
-          <div className="flex w-full sm:w-2/4  justify-end pr-4 pb-4">
-            <div className="w-full sm:w-2/4 bg-gray-200 p-4 rounded-lg sm:bg-opacity-100 bg-opacity-50">
-              <h2 className="text-2xl font-bold mb-4 text-gray-800">
-                tipos de pizza
-              </h2>
-              <div className="sm:hidden">
-              <Slider {...settings}>
-                {Object.keys(pizzaDescriptions).map((pizza) => (
-                  <li
-                    key={pizza}
-                    className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
-                      selectedPizza === pizza
-                        ? "bg-blue-200 bg-opacity-40 text-white"
-                        : "bg-gray-300 hover:bg-gray-400"
-                    } transition-all duration-300`}
-                    onClick={() =>
-                      handlePizzaSelect(pizza as keyof PizzaDescriptions)
-                    }
-                  >
-                    {pizza}
-                    <p className="text-sm text-gray-600">
-                      {pizzaDescriptions[pizza as keyof PizzaDescriptions]}
-                    </p>
-                  </li>
-                ))}
-              </Slider>
+          <div className="w-full flex flex-row-reverse">
+            <div className="w-2/4 flex-col justify-end bg-gray-600  px-10 rounded-lg ">
+              <div>
+                <h2 className="text-center text-3xl py-8 text-white ">
+                  Lista di cocktails
+                </h2>
               </div>
-              {/* vista para escritorio */}
-              <div className="hidden sm:block">
-                <ul>
-              {Object.keys(pizzaDescriptions).map((pizza) => (
-                  <li
-                    key={pizza}
-                    className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
-                      selectedPizza === pizza
-                        ? "bg-blue-500 text-white"
-                        : "bg-gray-300 hover:bg-gray-400"
-                    } transition-all duration-300`}
-                    onClick={() =>
-                      handlePizzaSelect(pizza as keyof PizzaDescriptions)
-                    }
-                  >
-                    {pizza}
-                    <p className="text-sm text-gray-600">
-                      {pizzaDescriptions[pizza as keyof PizzaDescriptions]}
-                    </p>
-                  </li>
-                ))}
+              <div className="sm: hidden">
+                <Slider {...settings}>
+                
+                  {Object.keys(cocktailDescriptions).map((cocktail) => (
+                    <li
+                      key={cocktail}
+                      className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
+                        selectedCocktail === cocktail
+                          ? "bg-blue-500 text-white"
+                          : "bg-gray-300 hover:bg-gray-400"
+                      } transition-all duration-300`}
+                      onClick={() => handleCocktailSelect(cocktail as keyof CocktailDescriptions)}
+                    >
+                      {cocktail}
+                      <p className="text-sm text-gray-600">
+                        {cocktailDescriptions[cocktail as keyof CocktailDescriptions]}
+                      </p>
+                    </li>
+                  ))}
+                
+                </Slider>
+                <div className="hidden sm:block">
+                <ul className="text-white pl-10 overflow-y-auto h-96">
+                  {Object.keys(cocktailDescriptions).map((cocktail) => (
+                    <li
+                      key={cocktail}
+                      className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
+                        selectedCocktail === cocktail
+                          ? "bg-blue-500 text-white"
+                          : "bg-gray-300 hover:bg-gray-400"
+                      } transition-all duration-300`}
+                      onClick={() => handleCocktailSelect(cocktail as keyof CocktailDescriptions)}
+                    >
+                      {cocktail}
+                      <p className="text-sm text-gray-600">
+                        {cocktailDescriptions[cocktail as keyof CocktailDescriptions]}
+                      </p>
+                    </li>
+                  ))}
                 </ul>
+                </div>
               </div>
+            </div>
+            <div className="w-3/4 flex justify-center flex-col items-center">
+              <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
+              <img
+                className="w-2/4 h-96 object-cover rounded-full max-h-96"
+                src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`}
+                alt=""
+              />
             </div>
           </div>
         </div>
       </main>
+      <div>
 
-      <Footer />
+      <Footer/>
+      </div>
     </div>
   );
 }
