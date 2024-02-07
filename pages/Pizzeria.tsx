@@ -3,7 +3,7 @@ import "@/style/globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import NavBarMobile from "@/components/NavBarMobile";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "@/style/pizzeria.css";
 import Banner from "@/components/Banner";
 import "slick-carousel/slick/slick.css";
@@ -32,11 +32,28 @@ type PizzaDescriptions = {
 
 export default function pizzeria() {
   const [selectedPizza, setSelectedPizza] = useState<string | null>(null);
+  const [sliderIndex, setSliderIndex] = useState<number>(0);
+
 
   const handlePizzaSelect = (pizza: string) => {
     setSelectedPizza(pizza);
   };
   console.log(selectedPizza);
+
+  useEffect(() => {
+    handlePizzaSelect(Object.keys(pizzaDescriptions)[sliderIndex]);
+  }, [sliderIndex]);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    afterChange: (current: number) => {
+      setSliderIndex(current);
+    }
+  };
+
 
   const pizzaDescriptions = {
     "4-Stagione":
@@ -88,12 +105,36 @@ export default function pizzeria() {
             </h1>
           </div>
           <div className="flex w-full sm:w-2/4  justify-end pr-4 pb-4">
-            <div className="flex-col justify-end w-full sm:w-2/4 bg-gray-200 p-4 rounded-lg">
+            <div className="w-full sm:w-2/4 bg-gray-200 p-4 rounded-lg sm:bg-opacity-100 bg-opacity-50">
               <h2 className="text-2xl font-bold mb-4 text-gray-800">
                 tipos de pizza
               </h2>
-              <ul className="list-disc pl-4">
+              <div className="sm:hidden">
+              <Slider {...settings}>
                 {Object.keys(pizzaDescriptions).map((pizza) => (
+                  <li
+                    key={pizza}
+                    className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
+                      selectedPizza === pizza
+                        ? "bg-blue-200 bg-opacity-40 text-white"
+                        : "bg-gray-300 hover:bg-gray-400"
+                    } transition-all duration-300`}
+                    onClick={() =>
+                      handlePizzaSelect(pizza as keyof PizzaDescriptions)
+                    }
+                  >
+                    {pizza}
+                    <p className="text-sm text-gray-600">
+                      {pizzaDescriptions[pizza as keyof PizzaDescriptions]}
+                    </p>
+                  </li>
+                ))}
+              </Slider>
+              </div>
+              {/* vista para escritorio */}
+              <div className="hidden sm:block">
+                <ul>
+              {Object.keys(pizzaDescriptions).map((pizza) => (
                   <li
                     key={pizza}
                     className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
@@ -111,7 +152,8 @@ export default function pizzeria() {
                     </p>
                   </li>
                 ))}
-              </ul>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

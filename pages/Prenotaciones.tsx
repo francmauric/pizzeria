@@ -26,7 +26,7 @@ import "@/style/globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import NavBarMobile from "@/components/NavBarMobile";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "@/style/pizzeria.css";
 import Banner from "@/components/Banner";
 import "slick-carousel/slick/slick.css";
@@ -55,11 +55,28 @@ type PizzaDescriptions = {
 
 export default function pizzeria() {
   const [selectedPizza, setSelectedPizza] = useState<string | null>(null);
+  const [sliderIndex, setSliderIndex] = useState<number>(0);
+
 
   const handlePizzaSelect = (pizza: string) => {
     setSelectedPizza(pizza);
   };
   console.log(selectedPizza);
+
+  useEffect(() => {
+    handlePizzaSelect(Object.keys(pizzaDescriptions)[sliderIndex]);
+  }, [sliderIndex]);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    afterChange: (current: number) => {
+      setSliderIndex(current);
+    }
+  };
+
 
   const pizzaDescriptions = {
     "4-Stagione":
@@ -116,13 +133,13 @@ export default function pizzeria() {
                 tipos de pizza
               </h2>
               <div className="sm:hidden">
-              <Slider dots infinite speed={500} slidesToShow={1}>
+              <Slider {...settings}>
                 {Object.keys(pizzaDescriptions).map((pizza) => (
                   <li
                     key={pizza}
                     className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
                       selectedPizza === pizza
-                        ? "bg-blue-500 text-white"
+                        ? "bg-blue-200 bg-opacity-40 text-white"
                         : "bg-gray-300 hover:bg-gray-400"
                     } transition-all duration-300`}
                     onClick={() =>
