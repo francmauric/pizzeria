@@ -137,23 +137,18 @@ const settings = {
                 <Slider {...settings}>
                 
                   {Object.keys(cocktailDescriptions).map((cocktail) => (
-                    <li
-                      key={cocktail}
-                      className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
-                        selectedCocktail === cocktail
-                          ? "bg-blue-500 text-white"
-                          : "bg-gray-300 hover:bg-gray-400"
-                      } transition-all duration-300`}
-                      onClick={() => handleCocktailSelect(cocktail as keyof CocktailDescriptions)}
-                    >
+                    <div key={cocktail}>
+                    <div className="cursor-pointer p-2 m-2 rounded border border-gray-400 bg-gray-300 hover:bg-gray-400" >
                       {cocktail}
                       <p className="text-sm text-gray-600">
                         {cocktailDescriptions[cocktail as keyof CocktailDescriptions]}
                       </p>
-                    </li>
+                    </div>
+                    </div>
                   ))}
                 
                 </Slider>
+              </div>
                 <div className="hidden sm:block">
                 <ul className="text-white pl-10 overflow-y-auto h-96">
                   {Object.keys(cocktailDescriptions).map((cocktail) => (
@@ -174,7 +169,7 @@ const settings = {
                   ))}
                 </ul>
                 </div>
-              </div>
+              
             </div>
             <div className="w-3/4 flex justify-center flex-col items-center">
               <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
