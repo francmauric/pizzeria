@@ -133,28 +133,27 @@ const settings = {
                   Lista di cocktails
                 </h2>
               </div>
-              <div className="sm: hidden">
+              <div className="">
                 <Slider {...settings}>
                 
                   {Object.keys(cocktailDescriptions).map((cocktail) => (
-                    <div key={cocktail}>
-                    <div className="cursor-pointer p-2 m-2 rounded border border-gray-400 bg-gray-300 hover:bg-gray-400" >
+                  <li 
+                    key={cocktail}
+                    className="cursor-pointer p-2 m-2 rounded border border-gray-400 bg-gray-300 hover:bg-gray-400" 
+                    >
                       {cocktail}
                       <p className="text-sm text-gray-600">
                         {cocktailDescriptions[cocktail as keyof CocktailDescriptions]}
                       </p>
-                    </div>
-                    </div>
+                    
+                </li>
                   ))}
-                
                 </Slider>
               </div>
-                <div className="hidden sm:block">
-                <ul className="text-white pl-10 overflow-y-auto h-96">
+              <div className="hidden sm:block overflow-y-auto h-96">
+                
                   {Object.keys(cocktailDescriptions).map((cocktail) => (
-                    <li
-                      key={cocktail}
-                      className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
+                    <div key={cocktail} className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
                         selectedCocktail === cocktail
                           ? "bg-blue-500 text-white"
                           : "bg-gray-300 hover:bg-gray-400"
@@ -165,9 +164,9 @@ const settings = {
                       <p className="text-sm text-gray-600">
                         {cocktailDescriptions[cocktail as keyof CocktailDescriptions]}
                       </p>
-                    </li>
+                    </div>
                   ))}
-                </ul>
+                
                 </div>
               
             </div>

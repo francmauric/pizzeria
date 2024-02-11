@@ -113,7 +113,7 @@ export default function pizzeria() {
               <Slider {...settings}>
                 {Object.keys(pizzaDescriptions).map((pizza) => (
                   <li
-                    key={pizza}
+                     key={pizza}
                     className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
                       selectedPizza === pizza
                         ? "bg-blue-200 bg-opacity-40 text-white"
