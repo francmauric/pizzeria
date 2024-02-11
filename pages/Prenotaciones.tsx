@@ -27,7 +27,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import NavBarMobile from "@/components/NavBarMobile";
 import Banner from "@/components/Banner";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "@/style/bar.css"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"
@@ -57,6 +57,17 @@ type CocktailDescriptions = {
 
 export default function bar() {
  const [selectedCocktail, setSelectedCocktail] = useState<keyof CocktailDescriptions | null>(null);
+ const [isResponsiveView, setIsResponsiveView] = useState(false); 
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsResponsiveView(window.innerWidth <= 768); //se define el ancho de la vista responsive 
+    }
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
 
 const handleCocktailSelect = (cocktail: keyof CocktailDescriptions) => {
   setSelectedCocktail(cocktail);
@@ -120,20 +131,20 @@ const settings = {
       <div>
         <Banner />
       </div> 
-      <main className="w-full relative h-screen bg-cover bg-center" style={{backgroundImage:"url('images/fondo-madera.jpg')"}}>
+      <main className="w-full relative bg-cover bg-center" style={{backgroundImage:"url('images/fondo-madera.jpg')"}}>
         
         <div className="relative z-10">
           <div className="w-full  ">
             <h1 className="text-4xl text-white text-center p-5">Menu</h1>
           </div>
           <div className="w-full flex flex-row-reverse">
-            <div className="w-2/4 flex-col justify-end bg-gray-600  px-10 rounded-lg ">
+            <div className="w-full sm:w-2/4 flex-col justify-end bg-gray-600  px-10 rounded-lg ">
               <div>
                 <h2 className="text-center text-3xl py-8 text-white ">
                   Lista di cocktails
                 </h2>
               </div>
-              <div className="">
+              <div className={isResponsiveView ? "sm:hidden" : ""}>
                 <Slider {...settings}>
                 
                   {Object.keys(cocktailDescriptions).map((cocktail) => (
@@ -150,7 +161,7 @@ const settings = {
                   ))}
                 </Slider>
               </div>
-              <div className="hidden sm:block overflow-y-auto h-96">
+              <div className={isResponsiveView ? "hidden sm:block overflow-y-auto h-96" : "sm:hidden"}>
                 
                   {Object.keys(cocktailDescriptions).map((cocktail) => (
                     <div key={cocktail} className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
@@ -170,10 +181,10 @@ const settings = {
                 </div>
               
             </div>
-            <div className="w-3/4 flex justify-center flex-col items-center">
+            <div className="w-full  sm:w-3/4 flex justify-center flex-col items-center">
               <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
               <img
-                className="w-2/4 h-96 object-cover rounded-full max-h-96"
+                className=" w-2/4 h-96 object-cover rounded-full max-h-96"
                 src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`}
                 alt=""
               />
