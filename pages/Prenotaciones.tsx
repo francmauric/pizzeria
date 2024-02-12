@@ -161,7 +161,7 @@ const settings = {
                   ))}
                 </Slider>
               </div>
-              <div className={isResponsiveView ? "hidden sm:block overflow-y-auto h-96" : "sm:hidden"}>
+              <div className={isResponsiveView ? "sm:hidden" : "hidden sm:block overflow-y-auto h-96" }>
                 
                   {Object.keys(cocktailDescriptions).map((cocktail) => (
                     <div key={cocktail} className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
