@@ -57,16 +57,21 @@ type CocktailDescriptions = {
 
 export default function bar() {
  const [selectedCocktail, setSelectedCocktail] = useState<keyof CocktailDescriptions | null>(null);
- const [isResponsiveView, setIsResponsiveView] = useState(false); 
+ /* const [isResponsiveView, setIsResponsiveView] = useState(false);  */
+ const [sliderIndex,setSliderIndex] = useState<number>(0);
 
-  useEffect(() => {
+ useEffect(() => {
+  handleCocktailSelect(Object.keys(cocktailDescriptions)[sliderIndex]);
+}, [sliderIndex]);
+ 
+ /*  useEffect(() => {
     const handleResize = () => {
       setIsResponsiveView(window.innerWidth <= 768); //se define el ancho de la vista responsive 
     }
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, []); */
 
 
 const handleCocktailSelect = (cocktail: keyof CocktailDescriptions) => {
@@ -109,7 +114,7 @@ const settings = {
   centerPadding: "60px",
   className: "center",
   afterChange: (current: number) => {
-    handleCocktailSelect(Object.keys(cocktailDescriptions)[current]);
+    setSliderIndex(current)
   }
 };
 
@@ -144,7 +149,7 @@ const settings = {
                   Lista di cocktails
                 </h2>
               </div>
-              <div className={isResponsiveView ? "sm:hidden" : ""}>
+              <div className="sm:hidden ">
                 <Slider {...settings}>
                 
                   {Object.keys(cocktailDescriptions).map((cocktail) => (
@@ -161,7 +166,7 @@ const settings = {
                   ))}
                 </Slider>
               </div>
-              <div className={isResponsiveView ? "sm:hidden" : "hidden sm:block overflow-y-auto h-96" }>
+              <div className="hidden sm:block overflow-y-auto h-96">
                 
                   {Object.keys(cocktailDescriptions).map((cocktail) => (
                     <div key={cocktail} className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
