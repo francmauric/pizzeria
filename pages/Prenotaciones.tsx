@@ -57,21 +57,23 @@ type CocktailDescriptions = {
 
 export default function bar() {
  const [selectedCocktail, setSelectedCocktail] = useState<keyof CocktailDescriptions | null>(null);
- /* const [isResponsiveView, setIsResponsiveView] = useState(false);  */
+ const [isResponsiveView, setIsResponsiveView] = useState(false); 
  const [sliderIndex,setSliderIndex] = useState<number>(0);
+
+
 
  useEffect(() => {
   handleCocktailSelect(Object.keys(cocktailDescriptions)[sliderIndex]);
 }, [sliderIndex]);
  
- /*  useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       setIsResponsiveView(window.innerWidth <= 768); //se define el ancho de la vista responsive 
-    }
+    };
     window.addEventListener("resize", handleResize);
     handleResize();
     return () => window.removeEventListener("resize", handleResize);
-  }, []); */
+  }, []);
 
 
 const handleCocktailSelect = (cocktail: keyof CocktailDescriptions) => {
@@ -143,6 +145,11 @@ const settings = {
             <h1 className="text-4xl text-white text-center p-5">Menu</h1>
           </div>
           <div className="w-full flex flex-row-reverse">
+            {isResponsiveView ? (
+              <>
+              
+              </>
+            )}
             <div className="w-full sm:w-2/4 flex-col justify-end bg-gray-600  px-10 rounded-lg ">
               <div>
                 <h2 className="text-center text-3xl py-8 text-white ">
@@ -163,6 +170,7 @@ const settings = {
                       </p>
                     
                 </li>
+                
                   ))}
                 </Slider>
               </div>
