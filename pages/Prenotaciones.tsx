@@ -140,16 +140,37 @@ const settings = {
       </div> 
       <main className="w-full relative bg-cover bg-center" style={{backgroundImage:"url('images/fondo-madera.jpg')"}}>
         
-        <div className="relative z-10">
+        {/* <div className="relative z-10">
           <div className="w-full  ">
             <h1 className="text-4xl text-white text-center p-5">Menu</h1>
           </div>
           <div className="w-full flex flex-row-reverse">
             {isResponsiveView ? (
               <>
-              
+                <div className="w-full flex justify-center flex-col items-center">
+                  <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
+                  <img
+                      className=" w-2/4 h-96 object-cover rounded-full max-h-96"
+                      src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`}
+                      alt=""
+                    />
+                </div>
+                <div className="w-full bg-gray-600 px-10 rounded-lg">
+                  <div>
+                    <h2 className="text-center text-3xl py-8 text-white">Lista di cocktails</h2>
+                  </div>
+                  <Slider {...settings}>
+                    {Object.keys(cocktailDescriptions).map((cocktail) => (
+                      <li key={cocktail} className="cursor-pointer p-2 m-2 rounded border border-gray-400 bg-gray-300 hover:bg-gray-400">
+                          {cocktail}
+                          <p>{cocktailDescriptions[cocktail as keyof CocktailDescriptions]}</p>
+                      </li>
+                    ))}
+                  </Slider>
+                </div>
               </>
-            )}
+            ) : (
+              <>
             <div className="w-full sm:w-2/4 flex-col justify-end bg-gray-600  px-10 rounded-lg ">
               <div>
                 <h2 className="text-center text-3xl py-8 text-white ">
@@ -174,6 +195,7 @@ const settings = {
                   ))}
                 </Slider>
               </div>
+
               <div className="hidden sm:block overflow-y-auto h-96">
                 
                   {Object.keys(cocktailDescriptions).map((cocktail) => (
@@ -202,6 +224,45 @@ const settings = {
                 alt=""
               />
             </div>
+              
+              </>
+            )}
+          </div>
+        </div> */}
+        <div className="relative z-10">
+          <div className="w-full  ">
+            <h1 className="text-4xl text-white text-center p-5">Menu</h1>
+          </div>
+          <div className="w-full flex flex-row-reverse">
+            <div className="w-full sm:w-2/4 flex-col justify-end bg-gray-600 px-10 rounded-lg">
+              <div>
+                <h2 className="text-center text-3xl py-8 text-white">Lista di cocktails</h2>
+              </div>
+              <div className={isResponsiveView ? "" : "hidden sm:block overflow-y-auto h-96"}>
+                {isResponsiveView && (
+                  <div className="flex justify-center items-center">
+                    <div>
+                      <h1 className="text-white text-center text-3xl p-4">{selectedCocktail}</h1>
+                      <img className="w-2/4 h-96 object-cover rounded-full max-h-96" src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`} alt="" />
+                    </div>
+                  </div>
+                )}
+                <Slider {...settings}>
+                  {Object.keys(cocktailDescriptions).map((cocktail) => (
+                    <li key={cocktail} className="cursor-pointer p-2 m-2 rounded border border-gray-400 bg-gray-300 hover:bg-gray-400">
+                      {cocktail}
+                      <p className="text-sm text-gray-600">{cocktailDescriptions[cocktail as keyof CocktailDescriptions]}</p>
+                    </li>
+                  ))}
+                </Slider>
+              </div>
+            </div>
+            {!isResponsiveView && (
+              <div className="w-full sm:w-3/4 flex justify-center flex-col items-center">
+                <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
+                <img className="w-2/4 h-96 object-cover rounded-full max-h-96" src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`} alt="" />
+              </div>
+            )}
           </div>
         </div>
       </main>
