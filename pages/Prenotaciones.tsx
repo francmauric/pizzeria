@@ -30,6 +30,9 @@ import NavBarMobile from "@/components/NavBarMobile";
 import Banner from "@/components/Banner";
 import { useState, useEffect } from "react";
 import "@/style/bar.css"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 type CocktailDescriptions = {
   Negroni: string;
@@ -53,12 +56,26 @@ type CocktailDescriptions = {
 
 export default function bar() {
  const [selectedCocktail, setSelectedCocktail] = useState<keyof CocktailDescriptions | null>(null);
- const [sliderIndex, setSliderIndex] = useState<number>(0);
+ const [sliderIndex1, setSliderIndex1] = useState<number>(0);
 
 
 const handleCocktailSelect = (cocktail: keyof CocktailDescriptions) => {
   setSelectedCocktail(cocktail);
 }
+
+useEffect(() => {
+  handleCocktailSelect(Object.keys(cocktailDescriptions)[sliderIndex1])
+},[sliderIndex1])
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  afterChange: (current: number) => {
+    setSliderIndex1(current);
+  }
+};
 
 const cocktailDescriptions: CocktailDescriptions = {
   Negroni: "gin, campari, vermuth",
@@ -116,7 +133,40 @@ const getImageFileName = (cocktail: string) => {
                   Lista di cocktails
                 </h2>
               </div>
-              <div>
+    {/* vista responsive */}
+              <div className="sm:hidden flex flex-row">
+                <Slider {...settings}>
+                
+                  {Object.keys(cocktailDescriptions).map((cocktail) => (
+                    <li
+                      key={cocktail}
+                      className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
+                        selectedCocktail === cocktail
+                          ? "bg-blue-500 text-white"
+                          : "bg-gray-300 hover:bg-gray-400"
+                      } transition-all duration-300`}
+                      onClick={() => handleCocktailSelect(cocktail as keyof CocktailDescriptions)}
+                    >
+                      {cocktail}
+                      <p className="text-sm text-gray-600">
+                        {cocktailDescriptions[cocktail as keyof CocktailDescriptions]}
+                      </p>
+                    </li>
+                  ))}
+               
+                </Slider>
+                <div className="w-full flex justify-center flex-col items-center">
+              <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
+              <img
+                className="w-2/4 h-96 object-cover rounded-full max-h-96"
+                src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`}
+                alt=""
+              />
+            </div>
+              </div>
+     {/* vista escritorio */}                 
+              <div className="hidden sm:block">
+              <div >
                 <ul className="text-white pl-10 overflow-y-auto h-96">
                   {Object.keys(cocktailDescriptions).map((cocktail) => (
                     <li
@@ -136,14 +186,15 @@ const getImageFileName = (cocktail: string) => {
                   ))}
                 </ul>
               </div>
-            </div>
-            <div className="w-3/4 flex justify-center flex-col items-center">
+            <div className=" sm:block w-3/4 flex justify-center flex-col items-center">
               <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
               <img
                 className="w-2/4 h-96 object-cover rounded-full max-h-96"
                 src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`}
                 alt=""
               />
+            </div>
+            </div>
             </div>
           </div>
         </div>
