@@ -156,13 +156,13 @@ const getImageFileName = (cocktail: string) => {
                
                 </Slider>
                 <div className="w-full flex justify-center flex-col items-center">
-              <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
-              <img
-                className="w-2/4 h-96 object-cover rounded-full max-h-96"
-                src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`}
-                alt=""
-              />
-            </div>
+                 <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
+                 <img
+                  className="w-2/4 h-96 object-cover rounded-full max-h-96"
+                  src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`}
+                  alt=""
+                 />
+                </div>
               </div>
      {/* vista escritorio */}                 
               <div className="hidden sm:block">
@@ -188,7 +188,7 @@ const getImageFileName = (cocktail: string) => {
               </div>
             </div>
             </div>
-            <div className=" sm:block w-3/4 flex justify-center flex-col ">
+            <div className="hidden sm:block w-3/4 justify-center flex-col ">
               <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
               <div className="flex justify-center">
                 <img

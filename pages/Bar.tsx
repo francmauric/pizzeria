@@ -83,6 +83,8 @@ const getImageFileName = (cocktail: string) => {
           <div className="w-full  ">
             <h1 className="text-4xl text-white text-center p-5">Menu</h1>
           </div>
+          {/* vista escritorio */}
+          <div className="hidden sm:block">
           <div className="w-full flex flex-row-reverse">
             <div className="w-2/4 flex-col justify-end bg-gray-600  px-10 rounded-lg ">
               <div>
@@ -120,6 +122,50 @@ const getImageFileName = (cocktail: string) => {
               />
             </div>
           </div>
+          </div>
+
+
+          {/* vista responsive */}
+          <div className="sm:hidden">
+          <div className=" w-full flex flex-row-reverse">
+            <div className="w-2/4 flex-col justify-end bg-gray-600  px-10 rounded-lg ">
+              <div>
+                <h2 className="text-center text-3xl py-8 text-white ">
+                  Lista di cocktails
+                </h2>
+              </div>
+              <div>
+                <ul className="text-white pl-10 overflow-y-auto h-96">
+                  {Object.keys(cocktailDescriptions).map((cocktail) => (
+                    <li
+                      key={cocktail}
+                      className={`cursor-pointer p-2 m-2 rounded border border-gray-400 ${
+                        selectedCocktail === cocktail
+                          ? "bg-blue-500 text-white"
+                          : "bg-gray-300 hover:bg-gray-400"
+                      } transition-all duration-300`}
+                      onClick={() => handleCocktailSelect(cocktail as keyof CocktailDescriptions)}
+                    >
+                      {cocktail}
+                      <p className="text-sm text-gray-600">
+                        {cocktailDescriptions[cocktail as keyof CocktailDescriptions]}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <div className="w-3/4 flex justify-center flex-col items-center">
+              <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
+              <img
+                className="w-2/4 h-96 object-cover rounded-full max-h-96"
+                src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`}
+                alt=""
+              />
+            </div>
+          </div>
+          </div>
+
         </div>
       </main>
       <div>
