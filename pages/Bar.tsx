@@ -127,8 +127,8 @@ const getImageFileName = (cocktail: string) => {
 
           {/* vista responsive */}
           <div className="sm:hidden">
-          <div className=" w-full flex flex-row-reverse">
-            <div className="w-2/4 flex-col justify-end bg-gray-600  px-10 rounded-lg ">
+          <div className=" w-full flex flex-wrap">
+            <div className="w-full flex-col justify-end bg-gray-600  px-10 rounded-lg ">
               <div>
                 <h2 className="text-center text-3xl py-8 text-white ">
                   Lista di cocktails
@@ -155,7 +155,7 @@ const getImageFileName = (cocktail: string) => {
                 </ul>
               </div>
             </div>
-            <div className="w-3/4 flex justify-center flex-col items-center">
+            <div className="w-full flex justify-center flex-col items-center">
               <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
               <img
                 className="w-2/4 h-96 object-cover rounded-full max-h-96"
