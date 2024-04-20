@@ -68,7 +68,7 @@ const getImageFileName = (cocktail: string) => {
         </div>
         <div className="flex object-contain relative overflow-hidden">
           <img
-            className="w-full relative z-10 absolute inset-0 object-cover"
+            className="w-full relative z-10  inset-0 object-cover"
             src="images/cocktailbar.jpg"
             alt="tavolo"
           />
@@ -77,14 +77,17 @@ const getImageFileName = (cocktail: string) => {
       <div>
         <Banner />
       </div> 
-      <main className="w-full relative h-screen bg-cover bg-center" style={{backgroundImage:"url('images/fondo-madera.jpg')"}}>
+      
+          {/* vista escritorio */}
+          <div className="hidden sm:block">
+
+          <main className="w-full relative h-screen bg-cover bg-center" style={{backgroundImage:"url('images/fondo-madera.jpg')"}}>
         
         <div className="relative z-10">
           <div className="w-full  ">
             <h1 className="text-4xl text-white text-center p-5">Menu</h1>
           </div>
-          {/* vista escritorio */}
-          <div className="hidden sm:block">
+
           <div className="w-full flex flex-row-reverse">
             <div className="w-2/4 flex-col justify-end bg-gray-600  px-10 rounded-lg ">
               <div>
@@ -121,7 +124,10 @@ const getImageFileName = (cocktail: string) => {
                 alt=""
               />
             </div>
-          </div>
+            </div>
+            </div>
+      </main>
+
           </div>
 
 
@@ -166,8 +172,7 @@ const getImageFileName = (cocktail: string) => {
           </div>
           </div>
 
-        </div>
-      </main>
+       
       <div>
 
       <Footer/>
