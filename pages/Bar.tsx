@@ -132,7 +132,16 @@ const getImageFileName = (cocktail: string) => {
 
 
           {/* vista responsive */}
+
           <div className="sm:hidden">
+          
+          <main className="w-full relative   " style={{backgroundImage:"url('images/fondo-madera.jpg')"}}>
+        
+        <div className="relative z-10">
+          <div className="w-full  ">
+            <h1 className="text-4xl text-white text-center p-5">Menu</h1>
+          </div>
+
           <div className=" w-full flex flex-wrap">
             <div className="w-full flex-col justify-end bg-gray-600  px-10 rounded-lg ">
               <div>
@@ -141,7 +150,7 @@ const getImageFileName = (cocktail: string) => {
                 </h2>
               </div>
               <div>
-                <ul className="text-white pl-10 overflow-y-auto h-96">
+                <ul className="text-white pl-10 overflow-y-auto h-60">
                   {Object.keys(cocktailDescriptions).map((cocktail) => (
                     <li
                       key={cocktail}
@@ -164,12 +173,16 @@ const getImageFileName = (cocktail: string) => {
             <div className="w-full flex justify-center flex-col items-center">
               <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
               <img
-                className="w-2/4 h-96 object-cover rounded-full max-h-96"
+                className="w-2/4  object-cover rounded-full "
                 src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`}
                 alt=""
               />
             </div>
           </div>
+
+        </div>
+        </main>
+
           </div>
 
        
