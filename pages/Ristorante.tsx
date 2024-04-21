@@ -25,7 +25,23 @@ export default function ristorante() {
             </div>
             <main>
                 <div>
-                    <h1>aqui va el menu</h1>
+                    <h1>Menu</h1>
+                    <div>
+                        <h2>Primi Piatti</h2>
+                        <ol>
+                            <li>Spaghetti alle volgole</li>
+                            <li>Spaghetti ai Frutti di mare</li>
+                            <li>Tagliolini all'Astice</li>
+                            <li>Tagliolini al Salmone</li>
+                            <li>Gnocchi Zucchine e Scampi</li>
+                            <li>Ravioli al Salmone</li>
+                            <li>Risotto ai Frutti di mare</li>
+                            <li>Spaghetti alla Carbonara</li>
+                            <li>Spaghetti al Pesto</li>
+                            <li>Gnocchi al Gorgonzola</li>
+                            
+                        </ol>
+                    </div>
                 </div>
             </main>
             <Footer />
