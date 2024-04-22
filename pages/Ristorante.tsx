@@ -42,6 +42,21 @@ export default function ristorante() {
                             
                         </ol>
                     </div>
+                    <div>
+                        <h2>Secondi</h2>
+                        <ol>
+                            <li>Frittura di Calamari</li>
+                            <li>Fritto misto</li>
+                            <li>Grigleata mista</li>
+                            <li>Branzino alla Ligure</li>
+                            <li>Branzino all griglia</li>
+                            <li>Orata con Patate e Porcini</li>
+                            <li>Orata alla griglia</li>
+                            <li>Gamberoni alla griglia</li>
+                            <li>Milanese</li>
+                            <li>Scaloppina a scelta</li>
+                        </ol>
+                    </div>
                 </div>
             </main>
             <Footer />
