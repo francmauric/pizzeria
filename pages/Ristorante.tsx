@@ -60,6 +60,21 @@ export default function ristorante() {
                 <li>Scaloppina a scelta</li>
               </ol>
             </div>
+            <div>
+                <h2 className="p-2 text-xl">Dessert</h2>
+                <ol>
+                    <li>Creme Caramel</li>
+                    <li>Tiramisu</li>
+                    <li>Panna cotta</li>
+                    <li>Millefoglie con Crema, Panna e Fragole</li>
+                    <li>Torta alla Frutta</li>
+                    <li>Crema Catalana</li>
+                    <li>Gelato</li>
+                    <li>Sorbetto</li>
+                    <li>Crepes con le Mele</li>
+                    <li>Tortino al Cioccolato</li>
+                </ol>
+            </div>
           </div>
         </div>
         {/* vista responsive */}
