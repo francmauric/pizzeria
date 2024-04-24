@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import "@/style/ristorante.css"
 import "@/style/globals.css";
 import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
@@ -6,20 +6,7 @@ import NavBarMobile from "@/components/NavBarMobile";
 import Banner from "@/components/Banner";
 
 export default function ristorante() {
-  const [scrollY, setScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollY(window.scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
- 
+  
 
   
   return (
@@ -39,15 +26,9 @@ export default function ristorante() {
           </div>
         </div>
       </div>
-      
-      <div className='relative'>
-        <div className='absolute left-0 top-0 w-full transform'
-              style={{ transform: `translateY(${scrollY * 0.5}px)`}}
-        >
-          <Banner />
-        </div>
-      </div>
-
+     <div className="banner"> 
+      <Banner />
+     </div>
       <main className='mt-20'>
         {/* vista escritorio */}
         <div className="bg-gray-400">
