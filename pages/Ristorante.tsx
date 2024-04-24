@@ -26,9 +26,9 @@ export default function ristorante() {
           </div>
         </div>
       </div>
-     <div className="banner"> 
+     
       <Banner />
-     </div>
+     
       <main className='mt-20'>
         {/* vista escritorio */}
         <div className="bg-gray-400">
