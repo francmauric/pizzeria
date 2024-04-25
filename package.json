@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
+    "@studio-freight/lenis": "^1.0.42",
     "@types/node": "20.5.8",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
@@ -21,6 +22,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.11.0",
     "react-slick": "^0.30.1",
+    "sass": "^1.75.0",
     "slick-carousel": "^1.8.1",
     "typescript": "5.2.2"
   },

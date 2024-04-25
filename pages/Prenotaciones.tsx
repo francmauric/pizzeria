@@ -27,6 +27,7 @@ import NavBar from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import NavBarMobile from "@/components/NavBarMobile";
 import Banner from "@/components/Banner";
+import IndexParallax from "@/components/ZoomParallax/indexParallax"
 
 export default function ristorante() {
   
@@ -107,6 +108,9 @@ export default function ristorante() {
         {/* vista responsive */}
         <div></div>
       </main>
+      <div className="bg-gray-950 mt-56 mb-96">
+        <IndexParallax />
+      </div>
       <Footer />
     </div>
   );
