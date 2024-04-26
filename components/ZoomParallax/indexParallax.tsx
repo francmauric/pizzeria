@@ -21,20 +21,60 @@ export default function IndexParallax() {
     })
     
     const scale4 = useTransform(scrollYProgress, [0, 1], [1, 4])
+    const scale5 = useTransform(scrollYProgress, [0, 1], [1, 5])
+    const scale6 = useTransform(scrollYProgress, [0, 1], [1, 6])
+    const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8])
+    const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9])
+
+    const pictures = [
+        {
+            src: monito,
+            scale: scale4
+        },
+        {
+            src: gatito,
+            scale: scale4
+        },
+        {
+            src: hoja,
+            scale: scale4
+        },
+        {
+            src: lobo,
+            scale: scale4
+        },
+        {
+            src: lobo2,
+            scale: scale4
+        },
+        {
+            src: chiquita,
+            scale: scale4
+        },
+        {
+            src: programadora,
+            scale: scale4
+        }
+    ]
 
     return (
         <div ref={container} className={styles.container}>
             <div className={styles.sticky}>
-                <div className={styles.el}>
-                    <motion.div style={{scale: scale4}} className={styles.imageContainer}>
+                {
+                    pictures.map(({src, scale}, index) =>{
+                        return <motion.div key={index} style={{scale}} className={styles.el}>
+                    <div className={styles.imageContainer}>
                         <Image 
-                            src={monito}
+                            src={src}
                             fill
                             alt='image'
                             placeholder='blur'
                         />
-                    </motion.div>
                 </div>
+                    </motion.div>
+
+                    })
+                }
             </div>
         </div>
     )

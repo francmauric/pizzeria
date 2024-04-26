@@ -20,7 +20,8 @@ export default function prenotaciones () {
         </div>
     )
 } */
-
+'use client'
+import styles from './ristorante.module.scss'
 import "@/style/ristorante.css"
 import "@/style/globals.css";
 import NavBar from "@/components/NavBar";
@@ -28,10 +29,24 @@ import Footer from "@/components/Footer";
 import NavBarMobile from "@/components/NavBarMobile";
 import Banner from "@/components/Banner";
 import IndexParallax from "@/components/ZoomParallax/indexParallax"
+import { useEffect  } from 'react';
+import Lenis from '@studio-freight/lenis';
 
 export default function ristorante() {
   
+  useEffect(() => {
+    const lenis = new Lenis()
 
+    lenis.on('scroll', (e) => {
+      console.log(e)
+    })
+
+      function raf(time) {
+          lenis.raf(time)
+          requestAnimationFrame(raf)
+      }
+      requestAnimationFrame(raf)
+  },[])
   
   return (
     <div>
@@ -108,7 +123,7 @@ export default function ristorante() {
         {/* vista responsive */}
         <div></div>
       </main>
-      <div className="bg-gray-950 mt-56 mb-96">
+      <div className={styles.main}>
         <IndexParallax />
       </div>
       <Footer />
