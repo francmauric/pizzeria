@@ -33,27 +33,27 @@ export default function IndexParallax() {
         },
         {
             src: gatito,
-            scale: scale4
+            scale: scale5
         },
         {
             src: hoja,
-            scale: scale4
+            scale: scale6
         },
         {
             src: lobo,
-            scale: scale4
+            scale: scale5
         },
         {
             src: lobo2,
-            scale: scale4
+            scale: scale6
         },
         {
             src: chiquita,
-            scale: scale4
+            scale: scale8
         },
         {
             src: programadora,
-            scale: scale4
+            scale: scale9
         }
     ]
 
