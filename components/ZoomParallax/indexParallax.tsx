@@ -1,13 +1,13 @@
 'use client'; 
 
 import styles from './styles.module.scss'
-import gatito from '../../public/images/imagenParallax/gatito.jpg'
-import hoja from '../../public/images/imagenParallax/hoja.jpg'
-import lobo from '../../public/images/imagenParallax/lobo.jpg'
-import lobo2 from '../../public/images/imagenParallax/lobo2.jpg'
+import spaguetti2 from '../../public/images/imagenParallax/spaguetti-a-la-bongola.jpg'
+import spaguetti from '../../public/images/imagenParallax/spaguetti-al-salmone.png'
+import gnocchi from '../../public/images/imagenParallax/gnocchi-zuchine.jpg'
+import ravioli from '../../public/images/imagenParallax/ravioli-al-salmone.jpg'
 import monito from '../../public/images/imagenParallax/monito.jpg'
-import chiquita from '../../public/images/imagenParallax/chiquita.jpg'
-import programadora from '../../public/images/imagenParallax/programadora.jpg'
+import risotto from '../../public/images/imagenParallax/risotto-ai-frutti.jpg'
+import spaguetti3 from '../../public/images/imagenParallax/spaguetti-a-la-carbonara.jpg'
 import Image from 'next/image'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import { useRef } from 'react';
@@ -32,36 +32,57 @@ export default function IndexParallax() {
             scale: scale4
         },
         {
-            src: gatito,
+            src: spaguetti2,
             scale: scale5
         },
         {
-            src: hoja,
+            src: spaguetti,
             scale: scale6
         },
         {
-            src: lobo,
+            src: gnocchi,
             scale: scale5
         },
         {
-            src: lobo2,
+            src: ravioli,
             scale: scale6
         },
         {
-            src: chiquita,
+            src: risotto,
             scale: scale8
         },
         {
-            src: programadora,
+            src: spaguetti3,
             scale: scale9
         }
     ]
 
     return (
+        <div>
         <div ref={container} className={styles.container}>
             <div className={styles.sticky}>
                 {
                     pictures.map(({src, scale}, index) =>{
+                        if (index === 0) {
+                            return (
+            <motion.div className={styles.el1} key={index} style={ {scale }}>
+                <div className={styles.imageContainer1}>
+              <h2 className="p-2 text-xl">Primi Piatti</h2>
+              <ol className='text-sm'>
+                <li>Spaghetti alle volgole</li>
+                <li>Spaghetti al Salmone</li>
+                <li>Gnocchi Zucchine e Scampi</li>
+                <li>Ravioli al Salmone</li>
+                <li>Risotto ai Frutti di mare</li>
+                <li>Spaghetti alla Carbonara</li>
+                
+              </ol>
+              </div>
+            </motion.div>
+
+                            );
+                        } else {
+
                         return <motion.div key={index} style={{scale}} className={styles.el}>
                     <div className={styles.imageContainer}>
                         <Image 
@@ -72,10 +93,12 @@ export default function IndexParallax() {
                         />
                 </div>
                     </motion.div>
+                        }
 
                     })
                 }
             </div>
+        </div>
         </div>
     )
 }

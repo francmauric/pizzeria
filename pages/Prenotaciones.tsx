@@ -125,6 +125,7 @@ export default function ristorante() {
       </main>
       <div className={styles.main}>
         <IndexParallax />
+        <IndexParallax />
       </div>
       <Footer />
     </div>
