@@ -31,6 +31,7 @@ import Banner from "@/components/Banner";
 import IndexParallax from "@/components/ZoomParallax/indexParallax"
 import { useEffect  } from 'react';
 import Lenis from '@studio-freight/lenis';
+import IndexParallax2 from '@/components/ZoomParallax/indexParallax2';
 
 export default function ristorante() {
   
@@ -73,36 +74,8 @@ export default function ristorante() {
         <div className="bg-gray-400">
           <h1 className="p-2 text-3xl bg-white">Menu</h1>
           <div className="bg-green-200 p-2">
-            <div className="bg-gray-200">
-              <h2 className="p-2 text-xl">Primi Piatti</h2>
-              <ol>
-                <li>Spaghetti alle volgole</li>
-                <li>Spaghetti ai Frutti di mare</li>
-                <li>Tagliolini all'Astice</li>
-                <li>Tagliolini al Salmone</li>
-                <li>Gnocchi Zucchine e Scampi</li>
-                <li>Ravioli al Salmone</li>
-                <li>Risotto ai Frutti di mare</li>
-                <li>Spaghetti alla Carbonara</li>
-                <li>Spaghetti al Pesto</li>
-                <li>Gnocchi al Gorgonzola</li>
-              </ol>
-            </div>
-            <div className="bg-blue-200 p-2">
-              <h2 className="p-2 text-xl">Secondi</h2>
-              <ol>
-                <li>Frittura di Calamari</li>
-                <li>Fritto misto</li>
-                <li>Grigleata mista</li>
-                <li>Branzino alla Ligure</li>
-                <li>Branzino all griglia</li>
-                <li>Orata con Patate e Porcini</li>
-                <li>Orata alla griglia</li>
-                <li>Gamberoni alla griglia</li>
-                <li>Milanese</li>
-                <li>Scaloppina a scelta</li>
-              </ol>
-            </div>
+           
+            
             <div>
                 <h2 className="p-2 text-xl">Dessert</h2>
                 <ol>
@@ -125,7 +98,7 @@ export default function ristorante() {
       </main>
       <div className={styles.main}>
         <IndexParallax />
-        <IndexParallax />
+        <IndexParallax2 />
       </div>
       <Footer />
     </div>

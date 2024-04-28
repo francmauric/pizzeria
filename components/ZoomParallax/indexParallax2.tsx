@@ -1,13 +1,13 @@
 'use client'; 
 
 import styles from './styles.module.scss'
-import spaguetti2 from '../../public/images/imagenParallaxPastas/primi/spaguetti-a-la-bongola.jpg'
-import spaguetti from '../../public/images/imagenParallaxPastas/primi/spaguetti-al-salmone.png'
-import gnocchi from '../../public/images/imagenParallaxPastas/primi/gnocchi-zuchine.jpg'
-import ravioli from '../../public/images/imagenParallaxPastas/primi/ravioli-al-salmone.jpg'
+import spaguetti2 from '../../public/images/imagenParallaxPastas/secondo/branzino_alla_griglia.jpeg'
+import spaguetti from '../../public/images/imagenParallaxPastas/secondo/gamberoni-alla-griglia.jpeg'
+import gnocchi from '../../public/images/imagenParallaxPastas/secondo/grigliata-di-carne.jpg'
+import ravioli from '../../public/images/imagenParallaxPastas/secondo/orata-alla-griglia.jpeg'
 import monito from '../../public/images/imagenParallaxPastas/monito.jpg'
-import risotto from '../../public/images/imagenParallaxPastas/primi/risotto-ai-frutti.jpg'
-import spaguetti3 from '../../public/images/imagenParallaxPastas/primi/spaguetti-a-la-carbonara.jpg'
+import risotto from '../../public/images/imagenParallaxPastas/secondo/Panatura-Cotoletta-Milanese-L.jpg'
+import spaguetti3 from '../../public/images/imagenParallaxPastas/secondo/Scaloppine.jpeg'
 import Image from 'next/image'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import { useRef } from 'react';
@@ -67,17 +67,19 @@ export default function IndexParallax() {
                             return (
             <motion.div className={styles.el1} key={index} style={ {scale }}>
                 <div className={styles.imageContainer1}>
-              <h2 className="p-2 text-xl">Primi Piatti</h2>
+                <h2 className="p-2 text-xl">Secondi</h2>
               <ol className='text-sm'>
-                <li>Spaghetti alle volgole</li>
-                <li>Spaghetti al Salmone</li>
-                <li>Gnocchi Zucchine e Scampi</li>
-                <li>Ravioli al Salmone</li>
-                <li>Risotto ai Frutti di mare</li>
-                <li>Spaghetti alla Carbonara</li>
-                
+                <li>Grigliata mista</li>
+                <li>Branzino alla griglia</li>
+                <li>Orata alla griglia</li>
+                <li>Gamberoni alla griglia</li>
+                <li>Milanese</li>
+                <li>Scaloppina a scelta</li>
               </ol>
-              </div>
+            </div>
+
+              
+              
             </motion.div>
 
                             );
