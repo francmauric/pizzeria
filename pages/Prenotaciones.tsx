@@ -32,6 +32,7 @@ import IndexParallax from "@/components/ZoomParallax/indexParallax"
 import { useEffect  } from 'react';
 import Lenis from '@studio-freight/lenis';
 import IndexParallax2 from '@/components/ZoomParallax/indexParallax2';
+import IndexParallax3 from '@/components/ZoomParallax/indexParallax3'
 
 export default function ristorante() {
   
@@ -71,35 +72,15 @@ export default function ristorante() {
      
       <main className='mt-20'>
         {/* vista escritorio */}
-        <div className="bg-gray-400">
-          <h1 className="p-2 text-3xl bg-white">Menu</h1>
-          <div className="bg-green-200 p-2">
-           
-            
-            <div>
-                <h2 className="p-2 text-xl">Dessert</h2>
-                <ol>
-                    <li>Creme Caramel</li>
-                    <li>Tiramisu</li>
-                    <li>Panna cotta</li>
-                    <li>Millefoglie con Crema, Panna e Fragole</li>
-                    <li>Torta alla Frutta</li>
-                    <li>Crema Catalana</li>
-                    <li>Gelato</li>
-                    <li>Sorbetto</li>
-                    <li>Crepes con le Mele</li>
-                    <li>Tortino al Cioccolato</li>
-                </ol>
-            </div>
-          </div>
-        </div>
-        {/* vista responsive */}
-        <div></div>
-      </main>
+        
       <div className={styles.main}>
         <IndexParallax />
         <IndexParallax2 />
+        <IndexParallax3 />
       </div>
+        {/* vista responsive */}
+        <div></div>
+      </main>
       <Footer />
     </div>
   );
