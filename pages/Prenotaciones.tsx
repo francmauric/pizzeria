@@ -70,8 +70,9 @@ export default function ristorante() {
      
       <Banner />
      
-      <main className='mt-20'>
+      <main className=' bg-gray-400'>
         {/* vista escritorio */}
+        <h1 className='text-4xl text-center'>Menu</h1>
         
       <div className={styles.main}>
         <IndexParallax />
