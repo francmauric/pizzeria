@@ -1,34 +1,35 @@
-import '@/style/globals.css'
+import "@/style/globals.css";
 
+import Link from "next/link";
+import Main from "@/components/Main";
 
-import Link from "next/link"
-import Main from '@/components/Main'
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-import Header from '@/components/Header'
-
-
-export default function prenotaciones () {
-
-    return (
-        <div>
-            
-            <Header />
-            <main className='bg-gray-400'>
-                <h1>apuntamento</h1>
-
-                <form action="" className='flex flex-wrap'>
-                    <label htmlFor="">Nombre</label>
-                    <input type="text" className='bg-orange-400'/>
-                    <input type="text" />
-
-                </form>
-            </main>
-            <h1 className='text-black  md:text-8xl'>PRENOTACIONES</h1>
-            <Main />
-            
-           
+export default function prenotaciones() {
+  return (
+    <div>
+      <Header />
+      <main className="bg-gray-400">
+        <h1 className="text-gray-800 text-4xl text-center p-20 ">
+          PRENOTACIONES
+        </h1>
+        <div className="flex flex-wrap">
+          <div className="border-2 border-blue-500 w-2/4">
+            <form action="" className="flex flex-wrap justify-center">
+              <label htmlFor="" className="w-3/4">NOME</label>
+              <input type="text" className="w-3/4 bg-orange-400" />
+              <label htmlFor="" className="w-3/4">COGNOME</label>
+              <input type="text" className="w-3/4 bg-orange-400"/>
+            </form>
+          </div>
+          <div className="w-2/4 border-2 border-blue-800">
+            <img src="" alt="" />
+          </div>
         </div>
-    )
+      </main>
+
+      <Footer />
+    </div>
+  );
 }
-
-
