@@ -11,6 +11,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Slider from "react-slick";
+import Image from "next/image"
 
 
 type PizzaDescriptions = {
@@ -31,7 +32,7 @@ type PizzaDescriptions = {
   Napoli: string;
 };
 
-export default function pizzeria() {
+const Pizzeria: React.FC = () => {
   const [selectedPizza, setSelectedPizza] = useState<string | null>(null);
   const [sliderIndex, setSliderIndex] = useState<number>(0);
 
@@ -84,10 +85,12 @@ export default function pizzeria() {
           <NavBarMobile />
         </div>
         <div className="flex object-contain relative overflow-hidden">
-          <img
+          <Image
             className="w-full relative z-10 absolute inset-0 object-cover"
-            src="images/pizzaheader.jpeg"
+            src="/images/pizzaheader.jpeg"
             alt="tavolo"
+            layout="fill"
+            objectFit="cover"
           />
         </div>
       </div>
@@ -163,4 +166,6 @@ export default function pizzeria() {
       <Footer />
     </div>
   );
-}
+};
+
+export default Pizzeria;
