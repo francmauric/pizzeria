@@ -8,27 +8,27 @@ import Footer from "@/components/Footer";
 import NavBarMobile from "@/components/NavBarMobile";
 import Banner from "@/components/Banner";
 import IndexParallax from "@/components/ZoomParallax/indexParallax"
-import { useEffect  } from 'react';
+import React, { useEffect  } from 'react';
 import Lenis from '@studio-freight/lenis';
 import IndexParallax2 from '@/components/ZoomParallax/indexParallax2';
 import IndexParallax3 from '@/components/ZoomParallax/indexParallax3'
+
 
 export default function ristorante() {
   
   useEffect(() => {
     const lenis = new Lenis()
 
-    lenis.on('scroll', (e) => {
+    lenis.on('scroll', (e: any) => {
       console.log(e)
     })
 
-      function raf(time) {
+      function raf(time: number) {
           lenis.raf(time)
           requestAnimationFrame(raf)
       }
       requestAnimationFrame(raf)
   },[])
-  
   return (
     <div>
       <div className="w-full ">
@@ -61,7 +61,10 @@ export default function ristorante() {
 
         {/* vista responsive */}
         
-        <div></div>
+        <div>
+
+          
+        </div>
       </main>
       <Footer />
     </div>

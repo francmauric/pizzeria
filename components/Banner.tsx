@@ -1,6 +1,6 @@
 
 
-export default function banner () {
+export default function Banner () {
 
     return(
         <div className="w-full ">

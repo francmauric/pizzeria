@@ -1,3 +1,4 @@
+import React from 'react';
 import "@/style/globals.css";
 import NavBar from "@/components/NavBar";
 import Link from "next/link";
@@ -27,7 +28,7 @@ type CocktailDescriptions = {
   "Caipirinha": string;
 };
 
-export default function bar() {
+export default function Bar() {
  const [selectedCocktail, setSelectedCocktail] = useState<keyof CocktailDescriptions | null>(null);
 
 const handleCocktailSelect = (cocktail: keyof CocktailDescriptions) => {

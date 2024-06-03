@@ -2,7 +2,6 @@
 
 import styles from './styles.module.scss'
 import cremaCaramel from '../../public/images/imagenParallaxPastas/dessert/crema-caramel.jpg'
-import cremaCatalana from '../../public/images/imagenParallaxPastas/dessert/crema-catalana.jpg'
 import millefoglie from '../../public/images/imagenParallaxPastas/dessert/millefoglie-con-crema-768x1152.jpg'
 import panna from '../../public/images/imagenParallaxPastas/dessert/panna-cotta.jpeg'
 import monito from '../../public/images/imagenParallaxPastas/monito.jpg'
@@ -36,7 +35,7 @@ export default function IndexParallax() {
             scale: scale5
         },
         {
-            src: cremaCatalana,
+            src: cremaCaramel,
             scale: scale6
         },
         {
