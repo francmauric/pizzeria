@@ -14,7 +14,7 @@ import IndexParallax2 from '@/components/ZoomParallax/indexParallax2';
 import IndexParallax3 from '@/components/ZoomParallax/indexParallax3'
 import Image from 'next/image';
 
-export default function ristorante() {
+export default function Ristorante() {
   
   useEffect(() => {
     const lenis = new Lenis()
@@ -28,6 +28,7 @@ export default function ristorante() {
           requestAnimationFrame(raf)
       }
       requestAnimationFrame(raf)
+       // eslint-disable-next-line react-hooks/exhaustive-deps
   },[])
   return (
     <div>

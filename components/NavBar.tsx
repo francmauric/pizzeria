@@ -1,15 +1,17 @@
 
 
-import React from "react";
+import React, { useState, useEffect} from "react";
 import Image from "next/image"
 
 import Link from "next/link";
 import { useScrollEffect } from "@/utils/client/scrollUtils";
 import { useScrollEffectServer  } from "@/utils/server/scrollUtilsServer";
 
-export default function NavBar() {
+const NavBar: React.FC = () => {
+  const navbarVisible = typeof window !== "undefined" ? useScrollEffect() : useScrollEffectServer();
 
-  const navbarVisible = typeof window !== 'undefined' ? useScrollEffect() : useScrollEffectServer();
+
+  /* const navbarVisible = typeof window !== 'undefined' ? useScrollEffect() : useScrollEffectServer(); */
   
   return (
     <div className={`hidden sm:flex ${navbarVisible ? "opacity-90" : "opacity-0"}`}>
@@ -44,3 +46,4 @@ export default function NavBar() {
     </div>
   );
 }
+export default NavBar;

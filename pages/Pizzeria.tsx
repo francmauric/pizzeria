@@ -44,6 +44,7 @@ const Pizzeria: React.FC = () => {
 
   useEffect(() => {
     handlePizzaSelect(Object.keys(pizzaDescriptions)[sliderIndex]);
+     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [sliderIndex]);
 
   const settings = {
