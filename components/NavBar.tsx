@@ -19,7 +19,7 @@ export default function NavBar() {
           {navbarVisible && (
             <>
         <div className="flex p-2">
-          <img className="w-40 rounded-full" src="images/logo-pizza.png" alt="logo-pizza" />
+          <Image className="w-40 rounded-full" src="/images/logo-pizza.png" alt="logo-pizza" width={1920} height={1080} />
         </div>
         <div className="flex justify-around content-center h-10 w-full">
           <Link href="/" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif  text-zinc-50 cursor-pointer "> Home
@@ -34,9 +34,9 @@ export default function NavBar() {
           <Link href="/Bar" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">Bar
           
           </Link>
-          <Link href="/Prenotaciones" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">Prenotaciones
+         {/*  <Link href="/Prenotaciones" className="flex text-3xl mx-3 hover:p-4 font-semibold font-sans hover:text-4xl hover:font-serif text-zinc-50 cursor-pointer ">Prenotaciones
          
-          </Link>
+          </Link> */}
         </div>
         </>
         )}

@@ -3,6 +3,7 @@ import React from "react"
 import { Disclosure } from "@headlessui/react"
 import { GiHamburgerMenu } from "react-icons/gi"
 import Link from "next/link";
+import Image from "next/image";
 
 
 export default function NavBarMobile () {
@@ -20,14 +21,14 @@ export default function NavBarMobile () {
         <div className="p-6 w-1/2 h-screen bg-gradient-to-b  from-orange-500 to-gray-400 z-100 bg-opacity-10 fixed top-0 -left-96 lg:left-0 lg:w-60  peer-focus:left-0 peer:transition ease-out delay-150 duration-200 sm:hidden">
           <div className="flex flex-col rounded justify-start item-center ">
             <div className="flex rounded-b-3xl items-center justify-center bg-gray-500 bg-opacity-80 p-3 h-32 py-6">
-                <img className="rounded-full  w-28" src="images/logo-pizza.png" alt="hair" />
+                <Image className="rounded-full  w-28" src="/images/logo-pizza.png" alt="hair" width={1920} height={1080} />
             </div>
              <div className="flex rounded-t-3xl flex-col bg-opacity-80 justify-items-center bg-gray-500 " >
              <Link href="/" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center">HOME</Link>
                  <Link href="/Ristorante" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center">Ristorante</Link>
                  <Link href="/Bar" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center">Bar</Link>
                  <Link href="/Pizzeria" className="p-3 cursor-pointer hover:bg-gray-500 rounded h-14 text-center">Pizzeria</Link>
-                 <Link href="/Prenotaciones" className="bg-indigo-500 h-16 ring-white-800 hover:ring-2 opacity-70 hover:opacity-100  p-3 cursor-pointer px-3 rounded text-center ">Prenotazione</Link>
+                 {/* <Link href="/Prenotaciones" className="bg-indigo-500 h-16 ring-white-800 hover:ring-2 opacity-70 hover:opacity-100  p-3 cursor-pointer px-3 rounded text-center ">Prenotazione</Link> */}
 
                 
              </div>

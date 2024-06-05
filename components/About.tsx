@@ -1,9 +1,12 @@
+
+import Image from "next/image";
+
 export default function About () {
 
     return (
         <div className="flex flex-col-reverse md:flex-row">
             <div className="md:w-1/2">
-              <img className="w-full md:w-auto p-5 rounded-full" src="images/ardente1.jpg" alt="pizzero" />
+              <Image className="w-full md:w-auto p-5 rounded-full" src="/images/ardente1.jpg" alt="pizzero" width={1920} height={1080}/>
             </div>
             <div className="md:w-1/2 m-3">
                 <h1 className="p-4 text-2xl md:text-3xl lg:text-4xl text-white">Chi Siamo noi</h1>
