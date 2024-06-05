@@ -2,6 +2,7 @@ import "@/style/globals.css";
 
 import Link from "next/link";
 import Main from "@/components/Main";
+import Image from "next/image";
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -24,7 +25,9 @@ export default function prenotaciones() {
             </form>
           </div>
           <div className="w-2/4 border-2 border-blue-800">
-            <img src="" alt="" />
+            <Image src="" alt=""  
+            width={1920} height={1080}
+            />
           </div>
         </div>
       </main>

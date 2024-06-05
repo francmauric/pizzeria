@@ -7,6 +7,7 @@ import NavBarMobile from "@/components/NavBarMobile";
 import Banner from "@/components/Banner";
 import { useState } from "react";
 import "@/style/bar.css"
+import Image from "next/image";
 
 type CocktailDescriptions = {
   Negroni: string;
@@ -68,10 +69,11 @@ const getImageFileName = (cocktail: string) => {
           <NavBarMobile />
         </div>
         <div className="flex object-contain relative overflow-hidden">
-          <img
+          <Image
             className="w-full relative z-10  inset-0 object-cover"
-            src="images/cocktailbar.jpg"
+            src="/images/cocktailbar.jpg"
             alt="tavolo"
+            width={1920} height={1080}
           />
         </div>
       </div>
@@ -119,10 +121,12 @@ const getImageFileName = (cocktail: string) => {
             </div>
             <div className="w-3/4 flex justify-center flex-col items-center">
               <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
-              <img
+              <Image
                 className="w-2/4 h-96 object-cover rounded-full max-h-96"
                 src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`}
                 alt=""
+            width={1920} height={1080}
+
               />
             </div>
             </div>
@@ -173,10 +177,12 @@ const getImageFileName = (cocktail: string) => {
             </div>
             <div className="w-full flex justify-center flex-col items-center">
               <h1 className="text-white text-center text-3xl p-4 pt-8">{selectedCocktail}</h1>
-              <img
+              <Image
                 className="w-2/4  object-cover rounded-full "
                 src={`/images/cocktails/${getImageFileName(selectedCocktail || "")}`}
                 alt=""
+            width={1920} height={1080}
+
               />
             </div>
           </div>

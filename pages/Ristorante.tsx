@@ -12,7 +12,7 @@ import React, { useEffect  } from 'react';
 import Lenis from '@studio-freight/lenis';
 import IndexParallax2 from '@/components/ZoomParallax/indexParallax2';
 import IndexParallax3 from '@/components/ZoomParallax/indexParallax3'
-
+import Image from 'next/image';
 
 export default function ristorante() {
   
@@ -38,10 +38,11 @@ export default function ristorante() {
             <NavBarMobile />
           </div>
           <div className="flex object-contain relative overflow-hidden">
-            <img
+            <Image
               className="w-full relative z-10 absolute inset-0 object-cover"
-              src="images/tavolo.jpeg"
+              src="/images/tavolo.jpeg"
               alt="tavolo"
+            width={1920} height={1080}
             />
           </div>
         </div>

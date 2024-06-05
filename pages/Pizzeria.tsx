@@ -85,10 +85,11 @@ const Pizzeria: React.FC = () => {
           <NavBarMobile />
         </div>
         <div className="flex object-contain relative overflow-hidden">
-          <img
+          <Image
             className="w-full relative z-10 absolute inset-0 object-cover"
             src="/images/pizzaheader.jpeg"
             alt="tavolo"
+            width={1920} height={1080}
             
           />
         </div>
