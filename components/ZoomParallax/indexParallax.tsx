@@ -1,13 +1,13 @@
 'use client'; 
 
 import styles from './styles.module.scss'
-import spaguetti2 from '../../public/images/imagenParallaxPastas/primi/spaguetti-a-la-bongola.jpg'
-import spaguetti from '../../public/images/imagenParallaxPastas/primi/spaguetti-al-salmone.png'
-import gnocchi from '../../public/images/imagenParallaxPastas/primi/gnocchi-zuchine.jpg'
-import ravioli from '../../public/images/imagenParallaxPastas/primi/ravioli-al-salmone.jpg'
-import monito from '../../public/images/imagenParallaxPastas/monito.jpg'
-import risotto from '../../public/images/imagenParallaxPastas/primi/risotto-ai-frutti.jpg'
-import spaguetti3 from '../../public/images/imagenParallaxPastas/primi/spaguetti-a-la-carbonara.jpg'
+const spaguetti2 = '/images/imagenParallaxPastas/primi/spaguetti-a-la-bongola.jpg'
+const spaguetti = '/images/imagenParallaxPastas/primi/spaguetti-al-salmone.png'
+const gnocchi = '/images/imagenParallaxPastas/primi/gnocchi-zuchine.jpg'
+const ravioli = '/images/imagenParallaxPastas/primi/ravioli-al-salmone.jpg'
+const monito = '/images/imagenParallaxPastas/monito.jpg'
+const risotto = '/images/imagenParallaxPastas/primi/risotto-ai-frutti.jpg'
+const spaguetti3 = '/images/imagenParallaxPastas/primi/spaguetti-a-la-carbonara.jpg'
 import Image from 'next/image'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import { useRef } from 'react';
@@ -26,7 +26,7 @@ export default function IndexParallax() {
     const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8])
     const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9])
 
-    const pictures = [
+    const pictures: string = [
         {
             src: monito,
             scale: scale4
@@ -89,7 +89,7 @@ export default function IndexParallax() {
                             src={src}
                             fill
                             alt='image'
-                            placeholder='blur'
+                            blurDataURL
                         />
                 </div>
                     </motion.div>
