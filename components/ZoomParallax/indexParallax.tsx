@@ -1,6 +1,11 @@
 'use client'; 
 
 import styles from './styles.module.scss'
+import Image from 'next/image'
+import { useScroll, useTransform, motion } from 'framer-motion'
+import { useRef } from 'react';
+
+//import de imagenes
 const spaguetti2 = '/images/imagenParallaxPastas/primi/spaguetti-a-la-bongola.jpg'
 const spaguetti = '/images/imagenParallaxPastas/primi/spaguetti-al-salmone.png'
 const gnocchi = '/images/imagenParallaxPastas/primi/gnocchi-zuchine.jpg'
@@ -8,9 +13,13 @@ const ravioli = '/images/imagenParallaxPastas/primi/ravioli-al-salmone.jpg'
 const monito = '/images/imagenParallaxPastas/monito.jpg'
 const risotto = '/images/imagenParallaxPastas/primi/risotto-ai-frutti.jpg'
 const spaguetti3 = '/images/imagenParallaxPastas/primi/spaguetti-a-la-carbonara.jpg'
-import Image from 'next/image'
-import { useScroll, useTransform, motion } from 'framer-motion'
-import { useRef } from 'react';
+
+
+
+interface Picture {
+    src: string;
+    scale: any;
+}
 
 export default function IndexParallax() {
     
@@ -26,7 +35,7 @@ export default function IndexParallax() {
     const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8])
     const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9])
 
-    const pictures: string = [
+    const pictures: Picture[] = [
         {
             src: monito,
             scale: scale4
@@ -56,6 +65,7 @@ export default function IndexParallax() {
             scale: scale9
         }
     ]
+
 
     return (
         <div>
@@ -87,9 +97,10 @@ export default function IndexParallax() {
                     <div className={styles.imageContainer}>
                         <Image 
                             src={src}
-                            fill
+                            layout="fill"
                             alt='image'
-                            blurDataURL
+                            placeholder="blur"
+                            blurDataURL={src}
                         />
                 </div>
                     </motion.div>
