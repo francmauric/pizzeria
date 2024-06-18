@@ -1,15 +1,23 @@
 'use client'; 
 
 import styles from './styles.module.scss'
-import cremaCaramel from '../../public/images/imagenParallaxPastas/dessert/crema-caramel.jpg'
-import millefoglie from '../../public/images/imagenParallaxPastas/dessert/millefoglie-con-crema-768x1152.jpg'
-import panna from '../../public/images/imagenParallaxPastas/dessert/panna-cotta.jpeg'
-import monito from '../../public/images/imagenParallaxPastas/monito.jpg'
-import tiramisu from '../../public/images/imagenParallaxPastas/dessert/tiramisu.jpg'
-import torta from '../../public/images/imagenParallaxPastas/dessert/torta-alla-fruta.jpeg'
 import Image from 'next/image'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import { useRef } from 'react';
+
+//importar imagenes 
+const cremaCaramel = '/images/imagenParallaxPastas/dessert/crema-caramel.jpg'
+const millefoglie = '/images/imagenParallaxPastas/dessert/millefoglie-con-crema-768x1152.jpg'
+const panna = '/images/imagenParallaxPastas/dessert/panna-cotta.jpeg'
+const monito = '/images/imagenParallaxPastas/monito.jpg'
+const tiramisu = '/images/imagenParallaxPastas/dessert/tiramisu.jpg'
+const torta = '/images/imagenParallaxPastas/dessert/torta-alla-fruta.jpeg'
+
+
+interface Picture {
+    src: string;
+    scale: any;
+}
 
 export default function IndexParallax() {
     
@@ -25,7 +33,7 @@ export default function IndexParallax() {
     const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8])
     const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9])
 
-    const pictures = [
+    const pictures: Picture[] = [
         {
             src: monito,
             scale: scale4
@@ -88,9 +96,10 @@ export default function IndexParallax() {
                     <div className={styles.imageContainer}>
                         <Image 
                             src={src}
-                            fill
+                            layout="fill"
                             alt='image'
                             placeholder='blur'
+                            blurDataURL={src}
                         />
                 </div>
                     </motion.div>

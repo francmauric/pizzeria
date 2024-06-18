@@ -1,16 +1,24 @@
 'use client'; 
 
 import styles from './styles.module.scss'
-import branzino from '../../public/images/imagenParallaxPastas/secondo/branzino_alla_griglia.jpeg'
-import gamberoni from '../../public/images/imagenParallaxPastas/secondo/gamberoni-alla-griglia.jpeg'
-import carne from '../../public/images/imagenParallaxPastas/secondo/grigliata-di-carne.jpg'
-import orata from '../../public/images/imagenParallaxPastas/secondo/orata-alla-griglia.jpeg'
-import monito from '../../public/images/imagenParallaxPastas/monito.jpg'
-import panatura from '../../public/images/imagenParallaxPastas/secondo/Panatura-Cotoletta-Milanese-L.jpg'
-import scalloppina from '../../public/images/imagenParallaxPastas/secondo/Scaloppine.jpeg'
 import Image from 'next/image'
 import { useScroll, useTransform, motion } from 'framer-motion'
 import { useRef } from 'react';
+
+//importando imagenes
+const branzino = '/images/imagenParallaxPastas/secondo/branzino_alla_griglia.jpeg'
+const gamberoni = '/images/imagenParallaxPastas/secondo/gamberoni-alla-griglia.jpeg'
+const carne = '/images/imagenParallaxPastas/secondo/grigliata-di-carne.jpg'
+const orata = '/images/imagenParallaxPastas/secondo/orata-alla-griglia.jpeg'
+const monito = '/images/imagenParallaxPastas/monito.jpg'
+const panatura = '/images/imagenParallaxPastas/secondo/Panatura-Cotoletta-Milanese-L.jpg'
+const scalloppina = '/images/imagenParallaxPastas/secondo/Scaloppine.jpeg'
+
+interface Picture {
+    src: string;
+    scale: any;
+
+}
 
 export default function IndexParallax() {
     
@@ -26,7 +34,7 @@ export default function IndexParallax() {
     const scale8 = useTransform(scrollYProgress, [0, 1], [1, 8])
     const scale9 = useTransform(scrollYProgress, [0, 1], [1, 9])
 
-    const pictures = [
+    const pictures: Picture[] = [
         {
             src: monito,
             scale: scale4
@@ -89,9 +97,10 @@ export default function IndexParallax() {
                     <div className={styles.imageContainer}>
                         <Image 
                             src={src}
-                            fill
+                            layout="fill"
                             alt='image'
                             placeholder='blur'
+                            blurDataURL={src}
                         />
                 </div>
                     </motion.div>
